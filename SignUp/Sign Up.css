@@ -1,0 +1,25 @@
+.sign_up{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 30px;
+      margin-top: 25vh;
+      margin-bottom: 25vh;
+      position: absolute;
+}
+    .images{
+        display: flex;
+        justify-content: center;
+        background-image: url(../Images//signup.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    }
+body{
+    margin:0px;
+    padding: 0px;
+}
