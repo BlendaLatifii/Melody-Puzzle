@@ -5,19 +5,33 @@
     <link rel="stylesheet" href="Sign Up.css"/>
 </head>
 <body>
-    <div class="images">
-    <form class="sign_up">
-        <h1>Sign up</h1>
-        <p> Already have a Melody Puzzle account? Login</p>
-        <label>Email address</label>
-        <input type="email" placeholder="Enter e-mail" class="data"/>
-        <label >Password</label>
-        <input type="password"  placeholder="Enter password" class="data">
-        <label > Age</label>
-        <input type="number"  placeholder="Enter age" class="data">
+    <div id="id01" class="modal">
+          
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <img src="../Images//shf-aftermovie.png" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label><b>Email</b></label>
+            <input type="email" placeholder="Enter E-mail" name="e-mail" >
 
-        <button>Sign Up</button>
-    </form>
-    </div>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label ><b>Birth date</b></label>
+            <input type="date"  name="Birth date">
+
+            <button type="submit">Sign Up</button>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+          </div>
+        </form>
+  </div>
 </body>
 </html>
