@@ -12,16 +12,14 @@ body{
     justify-content: center;
     background-color: #f1f1f1;
 }
-
 .section{
     background: url(../Images/music-sound-multimedia-player-concept.jpg) no-repeat left;
-    background-size: 55%;
+    background-size:50%;
     background-color: #fdfdfd;
     overflow: hidden;
-    padding: 100px 0;
 }
 .container{
-    width: 55%;
+    width: 50%;
     float: right;
     background-color: #fdfdfd;
     padding: 150px;
@@ -29,13 +27,15 @@ body{
 
 .container h1{
     margin-bottom:30px;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 900;
+    color: brown;
 }
+
 .text{
-    font-size: 15px;
-    color:#545454;
-     line-height: 30px;
+    font: srgb(15, 15, 15);
+    color:#1a1919;
+    line-height: 30px;
      text-align: justify;
      margin-bottom: 40px;
 }
