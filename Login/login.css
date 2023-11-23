@@ -3,7 +3,9 @@ body{
     margin: 0px;
     padding: 0px;
 }
-body {font-family: Arial, Helvetica, sans-serif;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 
 input[type=text], input[type=password] {
@@ -107,6 +109,7 @@ span.psw {
   from {-webkit-transform: scale(0)} 
   to {-webkit-transform: scale(1)}
 }
+
   
 @keyframes animatezoom {
   from {transform: scale(0)} 

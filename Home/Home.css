@@ -1,12 +1,15 @@
 
+body{
+    background: linear-gradient(to bottom,#192943,transparent);
+}
 .logo{
     font-family: cursive;
-    color:rgb(219 28 219);
+    color:lightcyan;
     font-size: x-large;
+    padding-right: 300px;
 }
 
 a{
-    color: black;
     text-transform: none;
     transition: 0.12s ease;
 }
@@ -26,8 +29,13 @@ ul li{
 }
 
 ul:hover a:hover{
-    color: rgb(137, 137, 236);
-    box-shadow: 0 2px 0 currentColor;
+    box-shadow: 0 2px 0 rgb(164, 233, 164);
+}
+@media screen and (max-width: 992px){
+    body{
+        display: block;
+        float: none;
+    }
 }
 .header{
     display: flex;
@@ -43,9 +51,9 @@ ul:hover a:hover{
     justify-content: flex-end;
     border-radius: 25px;
     border: 0;
-    padding: 10px 33px;
+    padding: 20px 18px;
     margin-left: 20px;
-    background-color: rgb(34, 187, 34);
+    background-color: rgb(180, 172, 172);
 }
 
 .categories{
@@ -59,7 +67,8 @@ ul:hover a:hover{
     align-items: center;
     justify-content: center;
     border-radius: 60px;
-    padding:3px;
+    padding:11px;
+    height: 5%;
 }
 
 .search-bar input{
@@ -81,38 +90,38 @@ ul:hover a:hover{
 }
 
 button:hover{
-    background-color: rgb(10, 82, 10);
+    background-color: rgb(216, 213, 213);
 }
 
-.side-text{
-    position: absolute;
+#scroll-text1{
+    font-size: 80px;
+    font-family:fantasy;
+    color: #dbd50d;
+    font-weight: 900;
 }
 
-.side-text{
-    top: 100px;
-    font-size: 60px;
-    right: 293px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: darkorange;
+#scroll-text2{
+    font-size: 80px;
+    font-family: fantasy;
+    color: #ff2963;
+    font-weight: 900;
 }
 
-h4:nth-child(3){
-    top: 167px;
-    font-size: 60px;
-    right: 320px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(51, 48, 247);
-}
-
-.Artists{
+#artist{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    height: 280px;
+    margin: 15px auto 0;
+    width: 100%;
+    transform: translateZ(0);
 }
 
 .img{
     font-family: math;
+}
+.footer{   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .right-side-footer{
@@ -120,11 +129,202 @@ h4:nth-child(3){
     justify-content: end;
     text-indent: 50px;
     padding-left: 6;
-    position: relative;
-    left: -50px;
-    top: 10px;
 }
 
 .right-side-footer:hover a:hover{
-    color:burlywood
+    color:burlywood;
 }
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+.round-img{
+    position: relative;
+    width: 250px; 
+    height: 230px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-position: center;
+    border: 3px solid #666;
+    background-size: cover;
+}
+
+.round-img:not(:first-child){
+    animation-name: bubbleshow ;
+}
+
+@media screen and(max-width:150%){
+    #round-img:first-child{
+    height: 262px!important;
+    margin: 0 0 0 -131px;
+    top: 10px!important;
+    width: 262px!important;
+    }
+
+    .round-img:nth-child(2){
+        width: 87px;
+        height: 87px;
+        top: 8.025405137689816px;
+        left: 796.3849882723465px;
+        position: absolute;
+    }
+}
+
+#artist :first-child{
+    height: 300px;
+    left: 525px;
+    top: 8px;
+    width: 300px;
+    position: absolute;
+}
+
+.round-img:nth-child(2){
+    width: 100px;
+    height: 100px;
+    top: 8.025405137689816px;
+    left: 824.3849882723465px;
+    position: absolute;
+}
+
+.round-img:nth-child(3){
+    width: 83px;
+    height: 83px;
+    top: 224.459264993262124px;
+    left: 816.0059417009455px;
+    position: absolute;
+} 
+
+.round-img:nth-child(4){
+    width: 98px;
+    height: 98px;
+    top: 128.16338555073412px;
+    left: 852.68996269542px;
+    position: absolute;
+}
+
+.round-img:nth-child(5){
+    width: 75px;
+    height: 75px;
+    top: 64px;
+    left: 951px;
+    position: absolute;
+}
+
+.round-img:nth-child(6){
+    width: 100px;
+    height: 100px;
+    top: 177px;
+    left: 954px;
+    position: absolute;
+}
+
+.round-img:nth-child(7){
+    width: 100px;
+    height: 100px;
+    top: 213px;
+    left: 1068px;
+    position: absolute;
+}
+
+.round-img:nth-child(8){
+    width: 66px;
+    height: 66px;
+    top: 110px;
+    left: 1041px;
+    position: absolute;
+}
+
+.round-img:nth-child(9){
+    width: 85px;
+    height: 85px;
+    top: 3px;
+    left: 1069px;
+    position: absolute;
+}
+
+.round-img:nth-child(10){
+    width: 95px;
+    height: 95px;
+    top: 121px;
+    left: 73px;
+    position: absolute;
+}
+
+.round-img:nth-child(11){
+    width: 100px;
+    height: 100px;
+    top: 196px;
+    left: 170px;
+    position: absolute;
+}
+
+.round-img:nth-child(12){
+    width: 95px;
+    height: 95px;
+    top: 35px;
+    left: 154px;
+    position: absolute;
+}
+
+.round-img:nth-child(13){
+    width: 75px;
+    height: 75px;
+    top: 120px;
+    left: 260px;
+    position: absolute;
+}
+
+.round-img:nth-child(14){
+    width: 95px;
+    height: 95px;
+    top: 17px;
+    left: 299px;
+    position: absolute;
+}
+
+.round-img:nth-child(15){
+    width: 95px;
+    height: 95px;
+    top: 201px;
+    left: 305px;
+    position: absolute;
+}
+
+.round-img:nth-child(16){
+    width: 60px;
+    height: 60px;
+    top: 230px;
+    left: 466px;
+    position: absolute;
+}
+
+.round-img:nth-child(17){
+    width: 111px;
+    height: 111px;
+    top: 97px;
+    left: 386px;
+    position: absolute;
+}
+
+.round-img:nth-child(18){
+    width: 69px;
+    height: 69px;
+    top: 9px;
+    left: 451px;
+    position: absolute;
+}
+
+.round-img:nth-child(19){
+    width: 95px;
+    height: 95px;
+    top: 102px;
+    left: 1127px;
+    position: absolute;
+}
+
+.round-img:hover, ::after{
+    box-sizing: border-box;
+}
+
