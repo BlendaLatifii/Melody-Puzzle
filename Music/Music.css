@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: linear-gradient( rgba(12, 173, 146, 0.63), transparent);
+}
+.search-bar{
+    height:40vh;
+    background: linear-gradient(rgb(12, 122, 113), 0.829);
+    background-position: 50% 100%;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.latest{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+}
+
+.Artists{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+}
+.img{
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+  }
+
+  h4{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+  }

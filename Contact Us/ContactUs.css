@@ -1,0 +1,55 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.contact{
+    height:40vh;
+    background: linear-gradient(rgb(0,0,0.5)) url(../Images/images.jpg);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.start{
+    color: blueviolet;
+    font-size: 28px;
+}
+.paragraph{
+     color: crimson;
+     font-size: 24px;
+}
+
+.-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:45%;
+    margin: 40px;
+    border: none;
+
+}
+
+.-form>h2{
+    color:crimson;
+    font-size: 30px;
+}
+.input-box{
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.input-box input , .input-box textarea{
+    width:50%;
+    padding: 5px 0;
+    margin:10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+}
+
