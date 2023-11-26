@@ -1,0 +1,63 @@
+*{
+    margin:0px;
+    padding:0px;
+} 
+body{
+    background-color: rgb(177, 175, 175);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.playlist-container {
+    text-align: center;
+}
+ #scroll-text{
+    margin: 50px;
+}
+.playlist-button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+img{
+    width: 40vh;
+    height: 40vh;
+    border-radius: 25px;
+}
+.playlist-button.stop {
+    background-color: #f44336;
+}
+.playlist-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+#prevButton{
+    border-radius: 100%;
+    background-color: aliceblue;
+    color: red;
+}
+#playPauseBtn{
+    border-radius: 100%;
+    background-color: aliceblue;
+    color: green;
+}
+#nextButton{
+    border-radius: 100%;
+    background-color: aliceblue;
+    color: red;
+}

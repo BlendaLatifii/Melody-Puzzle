@@ -1,55 +1,83 @@
-*{
-    margin: 0px;
-    padding: 0px;
+.logo{
+    font-family: cursive;
+    color:rgb(128, 49, 128);
+    font-size: x-large;
+    padding-right: 300px;
 }
-.contact{
-    height:40vh;
-    background: linear-gradient(rgb(0,0,0.5)) url(../Images/images.jpg);
-    background-position: 50% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+
+a{
+    text-transform: none;
+    transition: 0.12s ease;
+    color: #192943;
+}
+
+ul{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    flex-wrap: wrap;
+    list-style: none;
+    text-indent: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
-.start{
-    color: blueviolet;
-    font-size: 28px;
-}
-.paragraph{
-     color: crimson;
-     font-size: 24px;
+ul li{
+    margin: 0 0.75em 0 0.75em;
 }
 
-.-form{
+ul:hover a:hover{
+    box-shadow: 0 2px 0 rgb(164, 233, 164);
+}
+
+.header{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width:45%;
-    margin: 40px;
-    border: none;
-
+    justify-content: space-around;
 }
 
-.-form>h2{
-    color:crimson;
-    font-size: 30px;
+.pages{
+    list-style: none;
+    text-decoration: none;
 }
-.input-box{
-    text-align: center;
-    width: 100%;
-    margin-top: 10px;
-}
-.input-box input , .input-box textarea{
-    width:50%;
-    padding: 5px 0;
-    margin:10px 0;
-    border: none;
-    border-bottom: 2px solid #333;
-    outline: none;
+.no-link-style{
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 25px;
+    border: 0;
+    padding: 20px 18px;
+    margin-left: 20px;
+    background-color: rgb(180, 172, 172);
 }
 
+button:hover{
+    background-color: rgb(216, 213, 213);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+#right-side-text{
+    text-wrap: balance;
+    display: flex;
+    position: relative;
+    top: 187px;
+    font-size: xxx-large;
+    left: 40px;
+}
+
+.right-side-paragraph{
+    position: relative;
+    top: 154px;
+    color: dimgrey;
+    font-family: cursive;
+    left: 40px;
+}
+
+.left-side-text{
+    font-size: 40px;
+    font-family: system-ui;
+    padding-left: 700px;
+}

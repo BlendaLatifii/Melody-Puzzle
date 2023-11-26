@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="Music2.css">
+</head>
+<body>
+        <hr>
+    <marquee behavior="scroll" scrollamount="10" loop="infinite" id="scroll-text"  style="font-size: 28px; color:blueviolet;font-family: cursive;"><b><h2>♡♡♡Play your favorite song♡
+        Play your favorite song♡Play your favorite song♡Play your favorite song♡Play your favorite song♡Play your favorite song♡Play your favorite song♡♡♡</b></h2></marquee>
+
+
+    <audio id="music" loop>
+        <source src="" id="music" type="audio/mp3" />
+      </audio>
+
+      
+    <div class="container">
+        <img id="main-image" src=""/>
+        <span id="timer">0:00</span>
+        <div class="playlist-container">
+            <button class="playlist-button" id="prevBtn" style="color:black; margin-right: 40px;">Prev</button>
+            <button class="playlist-button" id="prevButton" onclick="backTenSeconds()"><<</button>
+            <button class="playlist-button" id="playPauseBtn" onclick="togglePlayPause()">Play</button>
+            <button class="playlist-button" id="nextButton" onclick="skipForward()">>></button>
+            <button class="playlist-button" id="nextBtn" style="color:green;margin-left:40px;">Next</button>
+        </div>
+    </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Retrieve an item from local storage
+    var storedItem = localStorage.getItem('music-key');
+
+    // Check if the item exists
+    if (storedItem !== null) {
+        // Do something with the retrieved item
+       document.getElementById('main-image').src = `../Images/${storedItem}.jpg`;
+       document.getElementById('music').src = `../songs/${storedItem}.mp3`;
+    }
+});
+  //#region Music
+  let music = document.getElementById("music");
+      let playPauseBtn = document.getElementById("playPauseBtn");
+      let timer = document.getElementById("timer");
+
+      let isPlaying = false;
+
+      function togglePlayPause() {
+        if (isPlaying) {
+          music.pause();
+          playPauseBtn.textContent = "Play";
+        } else {
+          music.play();
+          playPauseBtn.textContent = "Pause";
+        }
+        isPlaying = !isPlaying;
+      }
+
+      function skipForward() {
+        music.currentTime += 10;
+        updateTimer();
+      }
+
+      function backTenSeconds() {
+        if (music.currentTime >= 10) {
+          music.currentTime -= 10;
+          updateTimer();
+        }
+      }
+
+      function updateTimer() {
+        let minutes = Math.floor(music.currentTime / 60);
+        let seconds = Math.floor(music.currentTime % 60);
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        timer.textContent = `${minutes}:${seconds}`;
+      }
+
+      music.addEventListener("timeupdate", updateTimer);
+
+      //#endregion
+      let maxItem = 15;
+      let currentItem = +localStorage.getItem('music-key');
+      prevBtn.style.backgroundColor = "red";
+
+      document.getElementById("prevBtn").addEventListener("click", function() {
+         if(currentItem == 1)
+         {
+            currentItem = maxItem;
+         }
+         else{
+            currentItem--;
+         }
+
+         updateContent() ; 
+      });
+      document.getElementById("nextBtn").addEventListener("click", function() {
+        if(currentItem == maxItem)
+        {
+            currentItem = 1;
+        }
+        else{
+            currentItem++;
+        }
+         updateContent() ;
+      });
+      function updateContent() {
+         document.getElementById('main-image').src = `../Images/${currentItem}.jpg`;
+         let music =  document.getElementById('music');
+       music.src = `../songs/${currentItem}.mp3`;
+       music.play();
+       playPauseBtn.textContent="Pause"
+       updateTimer();
+      }
+</script>
+</body>
+</html>
