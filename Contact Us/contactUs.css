@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .logo{
     font-family: cursive;
     color:rgb(128, 49, 128);
@@ -66,12 +69,13 @@ nav{
     top: 187px;
     font-size: xxx-large;
     left: 40px;
+    font-family: sans-serif;
 }
 
 .right-side-paragraph{
     position: relative;
     top: 154px;
-    color: dimgrey;
+    color:green;
     font-family: cursive;
     left: 40px;
 }
@@ -79,5 +83,41 @@ nav{
 .left-side-text{
     font-size: 40px;
     font-family: system-ui;
-    padding-left: 700px;
+    padding-left: 790px;
+    position: relative;
+    top: -200px;
+}
+
+.contact-us{
+    width: 30%;
+    border-radius: 5px;
+    position: relative;
+    left: 784px;
+    top: -180px;
+}
+
+.footer{   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-side-footer{
+    display: flex;
+    justify-content: end;
+    text-indent: 50px;
+    padding-left: 6;
+}
+
+.right-side-footer:hover a:hover{
+    color:burlywood;
+}
+
+.contact-us label{
+    position:absolute;
+    left: 10px;
+    color: #adadad;
+    transform: translateY(-60%);
+    font-size: 16px;
+    pointer-events: none;
 }
