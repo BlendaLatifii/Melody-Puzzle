@@ -1,7 +1,4 @@
-*{
-    margin:0px;
-    padding: 0px;
-}
+
 .logo{
     font-family: cursive;
     color:blueviolet;
@@ -15,21 +12,23 @@ a{
     color: #192943;
 }
 
-
 ul{
+    list-style: none;
+}
+
+.header ul{
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
     text-indent: 50px;
     font-family: Arial, Helvetica, sans-serif;
     
 }
 
-ul li{
+.header ul li{
     margin: 0 0.75em 0 0.75em;
 }
 
-ul:hover a:hover{
+.header ul:hover a:hover{
     box-shadow: 0 2px 0 rgb(164, 233, 164);
 }
 .header{
@@ -60,8 +59,7 @@ nav{
 
 }
  .image{
-    flex: 1;
-    margin-right:40%;
+    margin-right:150px;
     border-radius: 40px;
     width: 300px;
     height: 350px;
@@ -102,4 +100,67 @@ nav{
 
 .right-side-footer:hover a:hover{
     color:burlywood;
+}
+
+.info .left-info{
+    text-align: left;
+    padding: 0px 0px 0px 2%;
+    border-bottom: 1px solid #eee;
+    font-weight: 700;
+}
+
+.info li{
+    list-style: none;
+    width: 100%;
+    width: 48%;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.info .right-info{
+    text-align: right;
+    padding: 0px 2% 0px 0px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+}
+
+.info{
+    font-family: sans-serif;
+}
+
+.songs li{
+    position: relative;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.songs{
+    padding-left: 0;
+    background: linear-gradient(to right, #FFFFFF, #E5E5E5);
+}
+
+.songs .all-li{
+    width: 90%;
+    color: #5C5C5C;
+    margin:20px;
+    line-height: 38px;
+}
+
+.name-of-song{
+    color: #464343;
+    font-size: large;
+    font-weight: 600;
+}
+
+.song-photo{
+    float: left;
+    margin-right: 5px;
+    width: 60px;
+    height: 40px;
 }
