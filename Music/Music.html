@@ -352,7 +352,6 @@ class PostSlider {
         this.slideMargin = ((this.sLiderWidth - (this.sildesPerPage * this.oneSLideWidth)) / (this.sildesPerPage * 2)).toFixed(5);
         this.changeSlidesMargins();
 
-        // Assign this.dots before calling bindDotClickHandlers
         this.dots = this.container.querySelectorAll('.dots span');
         this.bindDotClickHandlers();
 
@@ -505,8 +504,8 @@ class PostSlider {
 
             this.dots[currentIndex].classList.add('active');
 
-            this.prevBtn.style.opacity = Math.abs(scrollLeft) < 1 ? '0' : '1'; /*it means there is no element before so it would hide prev button*/
-            this.nextBtn.style.opacity = Math.abs(scrollLeft) + 2 >= this.slider.scrollWidth - this.slider.clientWidth ? '0' : '1'; /*it means there is no element after so it would hide next button*/
+            this.prevBtn.style.opacity = Math.abs(scrollLeft) < 1 ? '0' : '1'; 
+            this.nextBtn.style.opacity = Math.abs(scrollLeft) + 2 >= this.slider.scrollWidth - this.slider.clientWidth ? '0' : '1'; 
         });
     }
 
@@ -517,7 +516,6 @@ class PostSlider {
         const nextScroll = currentScroll + this.oneSLideWidth + (this.slideMargin * 2);
 
         if (nextScroll + this.slider.clientWidth > totalWidth) {
-            // If next slide goes beyond the end, scroll to the beginning
             this.slider.scrollTo({
                 left: 0,
                 behavior: 'smooth'
@@ -532,7 +530,6 @@ class PostSlider {
         const prevScroll = currentScroll - (this.oneSLideWidth + (this.slideMargin * 2));
 
         if (prevScroll < 0) {
-            // If previous slide goes before the beginning, scroll to the end
             this.slider.scrollTo({
                 left: this.slider.scrollWidth - this.slider.clientWidth,
                 behavior: 'smooth'
@@ -550,7 +547,6 @@ class PostSlider {
         for (let i = 0; i < dotCount; i++) {
             const dot = document.createElement('span');
             dot.addEventListener('click', () => {
-                // this.changeActiveDot(i);
                 this.handleDotClick(i);
             });
 

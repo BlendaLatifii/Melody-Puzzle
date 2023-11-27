@@ -1,7 +1,4 @@
-*{
-    margin:0px;
-    padding: 0px;
-}
+
 .logo{
     font-family: cursive;
     color:blueviolet;
@@ -59,16 +56,34 @@ nav{
     padding: 20px;
 
 }
- .image{
-    flex: 1;
-    margin-right:40%;
-    border-radius: 40px;
-    width: 300px;
-    height: 350px;
- }
- .basic-info{
-    flex: 2;
- }
+.contain {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    max-width: 300px; /* Set the maximum width of the image */
+    margin-right: 70px; /* Adjust the margin as needed */
+}
+
+.basic-info {
+    flex-grow: 2;
+}
+
+.info {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.info li {
+    margin-bottom: 5px; /* Adjust the margin as needed */
+}
+
+.leftinfo {
+    font-weight: bold;
+}
  .biography{
     display: flex;
     align-items: center;

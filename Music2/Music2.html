@@ -32,17 +32,15 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-    // Retrieve an item from local storage
+
     var storedItem = localStorage.getItem('music-key');
 
-    // Check if the item exists
+    
     if (storedItem !== null) {
-        // Do something with the retrieved item
        document.getElementById('main-image').src = `../Images/${storedItem}.jpg`;
        document.getElementById('music').src = `../songs/${storedItem}.mp3`;
     }
 });
-  //#region Music
   let music = document.getElementById("music");
       let playPauseBtn = document.getElementById("playPauseBtn");
       let timer = document.getElementById("timer");
@@ -81,7 +79,6 @@
 
       music.addEventListener("timeupdate", updateTimer);
 
-      //#endregion
       let maxItem = 15;
       let currentItem = +localStorage.getItem('music-key');
       prevBtn.style.backgroundColor = "red";
