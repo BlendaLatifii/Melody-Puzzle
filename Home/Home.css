@@ -13,7 +13,7 @@
     width: 50%;
     position: relative;
     left: 50%;
-    top: 30px;
+    top: 60px;
 }
 
 .music-library{
@@ -41,6 +41,7 @@ a{
     text-transform: none;
     transition: 0.12s ease;
     color: #192943;
+    text-decoration: none;
 }
 
 ul{
@@ -109,7 +110,7 @@ ul:hover a:hover{
         margin-top: 10px;
     }
 }
-button:hover{
+.no-link-style:hover{
     background-color: rgb(216, 213, 213);
 }
 .no-link-style{
@@ -124,7 +125,6 @@ button:hover{
 nav{
     display: flex;
     align-items: center;
-    padding: 10px;
     list-style-type: none;
 }
 
@@ -197,7 +197,7 @@ nav{
 }
 
 .main-text{
-    padding-left: 30px;
+    padding-left: 80px;
 }
 
 .round-img:nth-child(2){

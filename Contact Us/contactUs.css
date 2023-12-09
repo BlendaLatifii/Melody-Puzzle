@@ -89,7 +89,6 @@ button:hover{
 nav{
     display: flex;
     align-items: center;
-    padding: 10px;
     list-style-type: none;
 }
 
