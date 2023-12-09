@@ -4,30 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music</title>
+    <link href="https://fonts.cdnfonts.com/css/fantaisie-artistique" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Music2.css">
 </head>
 <body>
-        <hr>
-    <marquee behavior="scroll" scrollamount="10" loop="infinite" id="scroll-text"  style="font-size: 28px; color:blueviolet;font-family: cursive;"><b><h2>♡♡♡Play your favorite song♡
-        Play your favorite song♡Play your favorite song♡Play your favorite song♡Play your favorite song♡Play your favorite song♡Play your favorite song♡♡♡</b></h2></marquee>
+  <header>
+    <div class="header">
+       <h1 class="logo">MelodyPuzzle</h1>
+       <nav>
+           <div>
+       <ul class="nav-bar">
+        <li><a href="../Music/Music.html" class="Pages" style="text-decoration: none; " ><b>MUSIC</b></a></li>
+        <li><a href="../About Us/AboutUs.html" class="Pages" style="text-decoration: none;"><b>ABOUT US</b></a></li>
+        <li><a href="../Contact Us/contactUs.html" class="Pages" style="text-decoration: none;"><b>CONTACT US</b></a></li>
+       </ul>
+   </div>
+       <button class="no-link-style"><a href="../Login/login.html" style="text-decoration: none;color: black;"><b>LOG IN</b></a></button>
+       </nav>
+    </div>
+    <hr>
+   </header>
 
 
+
+  <main>
+    <div class="container">
     <audio id="music" loop>
         <source src="" id="music" type="audio/mp3" />
       </audio>
-
-      
-    <div class="container">
         <img id="main-image" src=""/>
         <span id="timer">0:00</span>
+      
         <div class="playlist-container">
-            <button class="playlist-button" id="prevBtn" style="color:black; margin-right: 40px;">Prev</button>
-            <button class="playlist-button" id="prevButton" onclick="backTenSeconds()"><<</button>
-            <button class="playlist-button" id="playPauseBtn" onclick="togglePlayPause()">Play</button>
-            <button class="playlist-button" id="nextButton" onclick="skipForward()">>></button>
-            <button class="playlist-button" id="nextBtn" style="color:green;margin-left:40px;">Next</button>
+            <button class="playlist-button" id="prevBtn" style="color:black; margin-right: 40px;"><i class="fa fa-backward" aria-hidden="true"></i></button>
+            <button class="playlist-button" id="prevButton" onclick="backTenSeconds()"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+            <button class="playlist-button" id="playPauseBtn" onclick="togglePlayPause()"><i class="fa fa-play" aria-hidden="true"></i></button>
+            <button class="playlist-button" id="nextButton" onclick="skipForward()"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+            <button class="playlist-button" id="nextBtn" style="color:green;margin-left:40px;"><i class="fa fa-forward" aria-hidden="true"></i></button>
         </div>
+</div>
+  </main>
+
+
+  <footer>
+    <hr>
+    <div class="footer">
+    <p>© 2023 MelodyPuzzle BE</p>
+    <div class="right-side-footer">
+        <a href="../Privacy Policy/privacyPolicy.html" style="text-decoration: none;">PRIVACY POLICY</a>
+        <a href="../Terms of Use/termsOfUse.html" style="text-decoration: none;">TERMS OF USE</a>
     </div>
+    </div>
+</footer>
+
 
 
 <script>

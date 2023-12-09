@@ -5,33 +5,70 @@
     <link rel="stylesheet" href="Sign Up.css"/>
 </head>
 <body>
-    <div id="id01" class="modal">
+  <form>
+    <div>
+        <h2>Sign Up</h2>
+    </div>
+    <div class="input-field">
+      <input type="text" required>
+      <label>Full name</label>
+    </div>
+    <div class="input-field">
+      <input type="text" required>
+      <label>Username</label>
+    </div>
+    <div class="input-field">
+      <input type="email" required>
+      <label>E-mail</label>
+    </div>
+    <div class="input-field">
+      <input type="password"  required>
+      <label>Password</label>
+    </div>
+    <div class="input-field">
+      <input type="password"  required>
+      <label> Confirm Password</label>
+    </div>
+    <div class="button">
+        <div class="inner"></div>
+        <button>Sign Up</button>
+    </div>
+
+  </form>
+
+
+  <script>
+     function validateForm(){
+          var fulNaame=document.getElementById('fullName').value;
+          var email=document.getElementById('email').value;
+          var uname=document.getElementById('username').value;
+          var psw=document.getElementById('password').value;
+
+          var fulNaameRegex=/^[a-zA-Z\s]+$/;
+          if(!nRegex.test(uname)){
+            alert("Enter a valid name");
+            return false;
+          }
+
+
+          var em=/w[a-zA-Z\s@][0-9]+@[^\s@]+\. w[2-4]+$/;
+          if(!em.test(email)){
+               alert("Enter a valid email");
+              return false;
+           }
           
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="imgcontainer">
-            <img src="../Images//shf-aftermovie.png" alt="Avatar" class="avatar">
-          </div>
-      
-          <div class="container">
-            <label><b>Email</b></label>
-            <input type="email" placeholder="Enter E-mail" name="e-mail" >
+          var n=/^[a-zA-Z\s]+$/;
+          if(!n.test(uname)){
+            alert("Enter a valid name");
+            return false;
+          }
 
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+          if(psw.length<8){
+          alert("Enter a valid password");
+            return true;
+           }
 
-            <label ><b>Birth date</b></label>
-            <input type="date"  name="Birth date">
-
-            <button type="submit">Sign Up</button>
-          </div>
-      
-          <div class="container" style="background-color:#f1f1f170">
-            <button type="button" class="cancelbtn">Cancel</button>
-          </div>
-        </form>
-  </div>
+     }
+  </script>
 </body>
 </html>

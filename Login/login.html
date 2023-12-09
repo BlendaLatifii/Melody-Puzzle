@@ -1,35 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css" />
-  </head>
-  <body>
-        <div id="id01" class="modal">
-          
-          <form class="modal-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
-              <img src="../Images//shf-aftermovie.png" alt="Avatar" class="avatar">
-            </div>
-        
-            <div class="container">
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
-        
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-                
-              <button type="submit">Login</button>
-              <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label>
-            </div>
-        
-            <div class="container" style="background-color:#f1f1f170">
-              <button type="button" class="cancelbtn">Cancel</button>
-              <span class="psw">Don't have an account? <a href="../SignUp/Sign up.html" style="text-decoration: none; color:rgb(28, 199, 142);"><b>Sign Up</b></a></span>
-            </div>
-          </form>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <form>
+    <div>
+        <h2>Log in</h2>
     </div>
-  </body>
+    <div class="input-field">
+      <input type="text" required>
+      <label>Username or e-mail</label>
+    </div>
+    <div class="input-field">
+      <input type="password"  required>
+      <label>Password</label>
+    </div>
+    <div >
+      <input type="checkbox"/>Remember me
+    </div>
+    <div class="button">
+        <div class="inner"></div>
+        <button>Log in</button>
+    </div>
+    <p style="display: flex;  justify-content: center;padding-bottom: 5px;">Forgot password?</p>
+    <span class="psw">Don't have an account? <a href="../SignUp/Sign up.html" style="text-decoration: none; color:rgb(28, 199, 142);"><b>Sign Up</b></a></span>
+
+  </form>
+</body>
+</html>
+
+ <script>
+
+     function validateForm(){
+          var uname=document.getElementById('username').value;
+          var psw=document.getElementById('password').value;
+          
+          var nRegex=/^[a-zA-Z\s]+$/;
+          if(!nRegex.test(uname)){
+            alert("Enter a valid name");
+            return false;
+          }
+
+           if(psw.length<8){
+            alert("Enter a valid password");
+            return true;
+           }
+     }
+
+ </script>
+ </body>
 </html>

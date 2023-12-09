@@ -1,24 +1,74 @@
-*{
-    margin:0px;
-    padding:0px;
-} 
+@import url('https://fonts.cdnfonts.com/css/fantaisie-artistique');
+
+.logo{
+    font-family: cursive;
+    color:blueviolet;
+    font-size: x-large;
+    padding-right: 300px;
+}
 body{
-    background-color: rgb(177, 175, 175);
+    background: linear-gradient(to bottom,#2d4263,white);
+ }
+
+a{
+    text-transform: none;
+    transition: 0.12s ease;
+    color: #192943;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-indent: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+ul li{
+    margin: 0 0.75em 0 0.75em;
+}
+
+ul:hover a:hover{
+    box-shadow: 0 2px 0 rgb(164, 233, 164);
+}
+@media screen and (max-width: 992px){
+    body{
+        display: block;
+        float: none;
+    }
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
 .container{
+    border: 2px solid white;
+    margin-right: 25%;
+    margin-left: 25%; 
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0.3, 0.2, 0.1); 
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
 }
 
-.playlist-container {
-    text-align: center;
+#timer {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
 }
- #scroll-text{
-    margin: 50px;
-}
+
 .playlist-button {
     border: none;
     color: white;
@@ -31,21 +81,16 @@ body{
     cursor: pointer;
     border-radius: 100px;
 }
-
 img{
     width: 40vh;
     height: 40vh;
     border-radius: 25px;
+    object-fit: cover;
 }
 .playlist-button.stop {
     background-color: #f44336;
 }
-.playlist-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-evenly;
-}
+
 #prevButton{
     border-radius: 100%;
     background-color: aliceblue;
@@ -60,4 +105,20 @@ img{
     border-radius: 100%;
     background-color: aliceblue;
     color: red;
+}
+.footer{   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-side-footer{
+    display: flex;
+    justify-content: end;
+    text-indent: 50px;
+    padding-left: 6;
+}
+
+.right-side-footer:hover a:hover{
+    color:burlywood;
 }

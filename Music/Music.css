@@ -1,14 +1,9 @@
-*{
-    margin:0px;
-    padding:0px;
-}
-
-body{
-    background: linear-gradient(to bottom,#192943,transparent);
-}
+ body{
+    background: linear-gradient(to bottom,#2d4263,white);
+ }
 .logo{
     font-family: cursive;
-    color:lightcyan;
+    color:blueviolet;
     font-size: x-large;
     padding-right: 300px;
 }
@@ -185,7 +180,7 @@ nav{
     .PostSlide .innerContainer .slider{display:flex;width:1280px;overflow-x:hidden;margin:auto;}
     .PostSlide .innerContainer .slider .slide{display:block;background-size: cover!important;background-position: center center!important;min-width:280px;margin:0 10px;}
     .PostSlide .innerContainer .slider{position:relative;z-index:2;}
-    .PostSlide .innerContainer .handles{display:flex;justify-content:space-between;position:relative;top:-150px;width:103%;cursor:pointer;margin-right:-20px;margin-left:-20px;z-index:4;-webkit-tap-highlight-color:transparent;}
+    .PostSlide .innerContainer .handles{display:flex;justify-content:space-between;position:relative;top:-240px;width:103%;cursor:pointer;margin-right:-20px;margin-left:-20px;z-index:4;-webkit-tap-highlight-color:transparent;}
     .PostSlide .dots{display:flex;align-items:center;justify-content:center;gap:10px;position:relative;}
     .PostSlide .dots span{border-radius:10px;background:#CBCBCB;width:6px;height:6px;display:inline-block;cursor:pointer;}
     .PostSlide .slider *{user-drag:none;-webkit-user-drag:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
