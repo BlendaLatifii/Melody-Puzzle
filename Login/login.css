@@ -6,7 +6,6 @@
 }
 
 body{
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,8 +15,7 @@ body{
   background-position: center;
 }
 .container{
-  position: relative ;
-  width: 400px;
+  width: 30%;
   background: white;
   padding: 60px 40px;
 }
@@ -35,16 +33,15 @@ h2{
   margin: 10px;
   position: relative;
   height: 50px;
-  width:90%;
+  width:100%;
+  margin-left: 0px !important;
+  padding: 0px;
+  margin-left: -1;
 }
 .input-field input{
   height: 100%;
-  width: 90%;
+  width: 100%;
   border: 1px  solid silver;
-  padding-right: 10px;
-  padding-left: 5px;
-  margin-right: 20px;
-  margin-left: 20px;
   outline: none;
   font-size: 19px;
   transition: .4s;
@@ -70,10 +67,19 @@ input:valid ~ label{
   font-size: 16px;
   color: #1DA1F2;
 }
+.remember{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 0px;
+
+}
+
 form .button{
   margin-top: 17px;
   overflow: hidden;
   z-index: 111;
+  padding-right: 20px;
 }
 .button .inner{
   position: absolute;
@@ -93,12 +99,46 @@ form .button{
   border:none;
   background: none;
   outline: none;
-  color: white;
-  font-size: 16px;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
 }
-
+.container .option{
+  font-size: 14px;
+  text-align: center;
+}
+.container .facebook a,
+.container .google a{
+  display: block;
+  height: 45px;
+  width: 100%;
+  font-size: 15px;
+  text-decoration: none;
+  line-height: 45px;
+  color: #fff;
+  border-radius: 5px;
+  padding-right: 30px;
+}
+.container .facebook i,
+.container .google i{
+  padding-right: 20px;
+  font-size: 16px;
+}
+.container .google a{
+  background: wheat;
+  margin: 20px 0 -15px 0;
+}
+.container .google a:hover{
+  background: wheat;
+  margin: 20px 0 -15px 0;
+}
+.container .facebook a{
+  background: linear-gradient( to right,  #3b5998 0%, #476bb8 100%);
+  margin: 20px 0 20px 0;
+}
+.container .facebook a:hover{
+  background: linear-gradient( to left,  #3b5998 0%, #476bb8 100%);
+  margin: 20px 0 20px 0;
+}
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s

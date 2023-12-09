@@ -11,20 +11,24 @@
 <body>
   <header>
     <div class="header">
-       <h1 class="logo">MelodyPuzzle</h1>
-       <nav>
-           <div>
-       <ul class="nav-bar">
-        <li><a href="../Music/Music.html" class="Pages" style="text-decoration: none; " ><b>MUSIC</b></a></li>
-        <li><a href="../About Us/AboutUs.html" class="Pages" style="text-decoration: none;"><b>ABOUT US</b></a></li>
-        <li><a href="../Contact Us/contactUs.html" class="Pages" style="text-decoration: none;"><b>CONTACT US</b></a></li>
-       </ul>
-   </div>
-       <button class="no-link-style"><a href="../Login/login.html" style="text-decoration: none;color: black;"><b>LOG IN</b></a></button>
-       </nav>
+      <div style="display: flex; justify-content: flex-start;padding-right: 5px;">
+        <a href="../Home/index.html" ><img src="../Images/logoo.png" alt="logo"></a>
+        <p></p>
+   <h1 class="logo">MelodyPuzzle</h1>
     </div>
-    <hr>
-   </header>
+    <nav>
+        <div>
+    <ul class="nav-bar">
+      <li><a href="../Home/index.html" class="Pages" style="text-decoration: none; color: black;" ><b>HOME</b></a></li>
+      <li><a href="../About Us/AboutUs.html" class="Pages" style="text-decoration: none;color: black;"><b>ABOUT US</b></a></li>
+      <li><a href="../Contact Us/contactUs.html" class="Pages" style="text-decoration: none;color: black;"><b>CONTACT US</b></a></li>
+    </ul>
+        </div>
+        <button class="no-link-style"><a href="../Login/login.html" style="text-decoration: none;color: black;"><b>LOG IN</b></a></button>
+    </nav>
+    </div>
+<hr>
+</header>
 
 
 
@@ -38,13 +42,16 @@
       
         <div class="playlist-container">
             <button class="playlist-button" id="prevBtn" style="color:black; margin-right: 40px;"><i class="fa fa-backward" aria-hidden="true"></i></button>
-            <button class="playlist-button" id="prevButton" onclick="backTenSeconds()"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
-            <button class="playlist-button" id="playPauseBtn" onclick="togglePlayPause()"><i class="fa fa-play" aria-hidden="true"></i></button>
-            <button class="playlist-button" id="nextButton" onclick="skipForward()"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+            <button class="playlist-button" id="prevButton"  style="color:red"onclick="backTenSeconds()"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+            <button class="playlist-button" id="playPauseBtn" style="color:green" onclick="togglePlayPause()"><i class="fa fa-play" aria-hidden="true"></i></button>
+            <button class="playlist-button" id="nextButton" style="color:red"  onclick="skipForward()"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
             <button class="playlist-button" id="nextBtn" style="color:green;margin-left:40px;"><i class="fa fa-forward" aria-hidden="true"></i></button>
         </div>
 </div>
   </main>
+
+  <br>
+  <br>
 
 
   <footer>
@@ -54,6 +61,7 @@
     <div class="right-side-footer">
         <a href="../Privacy Policy/privacyPolicy.html" style="text-decoration: none;">PRIVACY POLICY</a>
         <a href="../Terms of Use/termsOfUse.html" style="text-decoration: none;">TERMS OF USE</a>
+        <a href="../Contact Us/ContactUs.html" style="text-decoration: none;">CONTACT US</a>
     </div>
     </div>
 </footer>

@@ -2,22 +2,18 @@
     margin:0px;
     padding:0px;
 }
-
-body{
-    background:white
-}
 .logo{
     font-family: cursive;
-    color:blueviolet;
+    color:rgb(128, 49, 128);
     font-size: x-large;
-    padding-right: 300px;
+    margin:0;
 }
-
 a{
     text-transform: none;
     transition: 0.12s ease;
     color: #192943;
 }
+
 ul{
     display: flex;
     flex-wrap: wrap;
@@ -34,24 +30,95 @@ ul li{
 ul:hover a:hover{
     box-shadow: 0 2px 0 rgb(164, 233, 164);
 }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-bar li {
+    margin-right: 20px;
+}
+
+.Pages {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-bar li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .no-link-style {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-bar li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .no-link-style {
+        margin-top: 10px;
+    }
+}
+button:hover{
+    background-color: rgb(216, 213, 213);
+}
+.no-link-style{
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 25px;
+    border: 0;
+    padding: 20px 18px;
+    margin-left: 20px;
+    background-color: rgb(180, 172, 172);
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    list-style-type: none;
+}
+
 @media screen and (max-width: 992px){
     body{
         display: block;
         float: none;
     }
 }
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-nav{
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
+
 .section{
     background: url(../Images/music-sound-multimedia-player-concept.jpg) no-repeat left;
     background-size:55%;

@@ -10,11 +10,16 @@
 <body>
     <header>
         <div class="header">
+            <div style="display: flex; justify-content: flex-start;padding-right: 5px;">
+                <a href="../Home/index.html" ><img src="../Images/logoo.png" alt="logo"></a>
+                <p></p>
            <h1 class="logo">MelodyPuzzle</h1>
+            </div>
            <nav>
                <div>
            <ul class="nav-bar">
             <li><a href="../Home/index.html" class="Pages" style="text-decoration: none; color: black;" ><b>HOME</b></a></li>
+            <li><a href="../Music/Music.html" class="Pages" style="text-decoration: none;color: black;"><b>MUSIC</b></a></li>
             <li><a href="../About Us/AboutUs.html" class="Pages" style="text-decoration: none;color: black;"><b>ABOUT US</b></a></li>
            </ul>
             </div>
@@ -33,6 +38,7 @@
     <div class="left-side">
         <h3 class="left-side-text">Send us a message!</h3>
         <div class="contact-us">
+            <form>
             <input type="text" name="username" required style="padding: 10px 0; width: 100%; border: none; border-bottom: 1px solid gray; outline: none; border-radius: 5px;">
             <label for="username">Full name*</label>
             <br>
@@ -51,10 +57,27 @@
             <label for="message">Message</label>
             <br>
             <br>
-            <button type="submit" style="border: 1px solid transparent; border-radius: 8px; padding: 14px 25px; text-transform: uppercase; cursor: pointer; background-color: rgb(18, 29, 128);color: aliceblue;">Send message</button>
+            <button type="submit" style="border: 1px solid transparent; border-radius: 8px; padding: 14px 25px; text-transform: uppercase; cursor: pointer; background-color: rgb(18, 29, 128);color: aliceblue;" onclick="validateContact()">Send message</button>
+        </form>
         </div>
     </div>
     </main>
+    <script>
+        function validateContact(){
+             var fullname=document.getElementById('fullname').value;
+             var email=document.getElementById('email').value;
+             var fullnameRegex=/^[A-Za-z\s]+$/;
+             if(!fullnameRegex.test(fullname)){
+            alert("Enter a valid fullname");
+            return false;
+            }
+            var emailRegex=/w[a-zA-Z\s@][0-9]+@[^\s@]+\. w[2-4]+$/;
+            if(!emailRegex.test(email)){
+               alert("Enter a valid email");
+              return false;
+            }
+        }
+    </script>
     <footer>
         <hr>
         <div class="footer">

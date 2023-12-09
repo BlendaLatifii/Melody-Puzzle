@@ -1,20 +1,23 @@
 @import url('https://fonts.cdnfonts.com/css/fantaisie-artistique');
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .logo{
     font-family: cursive;
-    color:blueviolet;
+    color:rgb(128, 49, 128);
     font-size: x-large;
-    padding-right: 300px;
+    margin:0;
 }
-body{
-    background: linear-gradient(to bottom,#2d4263,white);
- }
 
 a{
     text-transform: none;
     transition: 0.12s ease;
     color: #192943;
 }
+
 ul{
     display: flex;
     flex-wrap: wrap;
@@ -31,16 +34,54 @@ ul li{
 ul:hover a:hover{
     box-shadow: 0 2px 0 rgb(164, 233, 164);
 }
-@media screen and (max-width: 992px){
-    body{
-        display: block;
-        float: none;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-bar li {
+    margin-right: 20px;
+}
+
+.Pages {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-bar li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .no-link-style {
+        margin-top: 10px;
     }
 }
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+
+button:hover{
+    background-color: rgb(216, 213, 213);
 }
 nav{
     display: flex;
@@ -49,63 +90,66 @@ nav{
     margin: 0;
     list-style-type: none;
 }
+.no-link-style{
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 25px;
+    border: 0;
+    padding: 20px 18px;
+    margin-left: 20px;
+    background-color: rgb(180, 172, 172);
+}
 
-.container{
+.container {
     border: 2px solid white;
-    margin-right: 25%;
-    margin-left: 25%; 
+    margin: 5%;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0.3, 0.2, 0.1); 
+    box-shadow: 10px 10px 10px rgba(0, 0.3, 0.2, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-}
-
-#timer {
+  }
+  
+  #timer {
     font-size: 2em;
     font-weight: bold;
     color: #333;
-}
-
-.playlist-button {
+  }
+  
+  .playlist-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .playlist-button {
     border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    padding: 15px 20px;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 4px;
     cursor: pointer;
     border-radius: 100px;
-}
-img{
-    width: 40vh;
-    height: 40vh;
-    border-radius: 25px;
-    object-fit: cover;
-}
-.playlist-button.stop {
-    background-color: #f44336;
-}
-
-#prevButton{
-    border-radius: 100%;
-    background-color: aliceblue;
-    color: red;
-}
-#playPauseBtn{
-    border-radius: 100%;
-    background-color: aliceblue;
-    color: green;
-}
-#nextButton{
-    border-radius: 100%;
-    background-color: aliceblue;
-    color: red;
-}
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 20px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .container {
+      margin: 2%;
+    }
+  
+    .playlist-button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
 .footer{   
     display: flex;
     align-items: center;
