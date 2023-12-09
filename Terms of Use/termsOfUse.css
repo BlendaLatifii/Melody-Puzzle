@@ -1,4 +1,7 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
 .logo{
     font-family: cursive;
     color:rgb(128, 49, 128);
@@ -56,8 +59,7 @@ button:hover{
 nav{
     display: flex;
     align-items: center;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
     list-style-type: none;
 }
 
@@ -66,6 +68,7 @@ nav{
     font-family: var(--font-deezer,"Deezer","Arial",sans-serif);
     font-weight: bolder;
     letter-spacing: -5px;
+    padding-top: 10px;
 }
 
 .conditions{
@@ -84,6 +87,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .right-side-footer{

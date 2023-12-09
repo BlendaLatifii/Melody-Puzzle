@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 
 .logo{
     font-family: cursive;
@@ -41,8 +45,7 @@ ul{
 nav{
     display: flex;
     align-items: center;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
     list-style-type: none;
 }
 @media screen and (max-width: 992px){
@@ -88,7 +91,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    padding: 10px;
 }
 
 .right-side-footer{
@@ -156,6 +159,7 @@ nav{
     color: #464343;
     font-size: large;
     font-weight: 600;
+    padding-left: 10px;
 }
 
 .song-photo{
