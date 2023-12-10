@@ -410,8 +410,6 @@ class PostSlider {
             behavior: smooth ? 'smooth' : 'instant'
         });
 
-        console.log('Current position - New position:', currentPosition - newPosition);
-
         setTimeout(() => {
             this.snapToNearestSlide();
         }, 300);
@@ -440,7 +438,6 @@ class PostSlider {
     bindDotClickHandlers() {
         for (let i = 0; i < this.dots.length; i++) {
             this.dots[i].addEventListener('click', () => {
-                console.log('Dot clicked:', i);
                 this.handleDotClick(i);
             });
         }
@@ -486,7 +483,6 @@ class PostSlider {
                 isDragging = false;
                 const currentPosition = this.slider.scrollLeft;
                 const nearestLeftScroll = Math.round(currentPosition / (this.oneSLideWidth+(this.slideMargin*2))) * (this.oneSLideWidth+(this.slideMargin*2));
-                console.log(nearestLeftScroll);
                 this.slider.scrollTo({
                     left:  nearestLeftScroll,
                     behavior: 'smooth'
@@ -505,9 +501,6 @@ class PostSlider {
         this.slider.addEventListener('scroll', () => {
             const scrollLeft = this.slider.scrollLeft;
             const currentIndex = Math.trunc((Math.abs(scrollLeft) + 2) / this.slider.clientWidth);
-
-            console.log('Scroll Left:', scrollLeft);
-            console.log('Current Index:', currentIndex);
 
             for (let i = 0; i < this.dots.length; i++) {
                 this.dots[i].classList.remove('active');
