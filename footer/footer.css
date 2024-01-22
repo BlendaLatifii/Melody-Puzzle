@@ -1,0 +1,19 @@
+.footer{   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: linear-gradient(to right,black,gray);;
+}
+
+.right-side-footer{
+    display: flex;
+    justify-content: end;
+    text-indent: 50px;
+    padding-left: 6;
+    width: 50%;
+}
+
+.right-side-footer:hover a:hover{
+    color:burlywood;
+}

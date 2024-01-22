@@ -8,24 +8,11 @@
 </head>
 <body>
     <header>
-        <div class="header">
-            <div style="display: flex; justify-content: flex-start;padding-right: 5px;">
-                <a href="../Home/index.html" ><img src="../Images/logoo.png" alt="logo" style="width: 35px;"></a>
-            <h1 class="logo">MelodyPuzzle</h1>
-             </div>
-           <nav>
-               <div>
-           <ul class="nav-bar">
-            <li><a href="../Home/index.html" class="Pages" style="text-decoration: none; color: black;" ><b>HOME</b></a></li>
-            <li><a href="../About Us/AboutUs.html" class="Pages" style="text-decoration: none;color: black;"><b>ABOUT US</b></a></li>
-            <li><a href="../Contact Us/contactUs.html" class="Pages" style="text-decoration: none;color: black;"><b>CONTACT US</b></a></li>
-           </ul>
-            </div>
-            <button class="no-link-style"><a href="../Login/login.html" style="text-decoration: none;color: black;"><b>LOG IN</b></a></button>
-           </nav>
-        </div>
-        <hr>
-    </header>
+       <?php
+       session_start();
+        include('../header/header.php');
+        ?>
+    </header>    
     <main>
         <div class="contains">
         <h1 id="name">Privacy Policy for MelodyPuzzle</h1>
@@ -83,21 +70,9 @@
         </div>
     </main>
     <footer>
-        <hr>
-        <div class="footer">
-        <p>© 2023 MelodyPuzzle BE</p>
-        <p>melodypuzzle@outlook.com</p>
-        <a href="https://www.instagram.com/"><img src="../Images/instagrami.png" alt=""></a>
-        <a href="https://www.facebook.com//"><img src="../Images/ffacebook.png" alt=""></a>
-        <a href="https://twitter.com/"><img src="../Images/ttwitter.jpg" alt=""></a>
-         
-        <div class="right-side-footer">
-            <a href="../Privacy Policy/privacyPolicy.html" style="text-decoration: none;">PRIVACY POLICY</a>
-            <a href="../Terms of Use/termsOfUse.html" style="text-decoration: none;">TERMS OF USE</a>
-            <a href="../Contact Us/ContactUs.html" style="text-decoration: none;">CONTACT US</a>
-
-        </div>
-        </div>
+         <?php
+          include('../footer/footer.php');
+          ?>
     </footer>
 </body>
 </html>

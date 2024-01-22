@@ -6,24 +6,24 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <header>
-         <div class="header">
-            <div style="display: flex; justify-content: flex-start;padding-right: 5px;">
-               <a href="../Home/index.html" ><img src="../Images/logoo.png" alt="logo" style="width: 35px;"></a>
-           <h1 class="logo">MelodyPuzzle</h1>
-            </div>
-            <nav>
-                <div>
-            <ul class="nav-bar">
-                <li><a href="../Music/Music.html" class="Pages" style="text-decoration: none; color: antiquewhite;" ><b>MUSIC</b></a></li>
-                <li><a href="../About Us/AboutUs.html" class="Pages" style="text-decoration: none;color: antiquewhite;"><b>ABOUT US</b></a></li>
-                <li><a href="../Contact Us/contactUs.html" class="Pages" style="text-decoration: none;color: antiquewhite;"><b>CONTACT US</b></a></li>
-            </ul>
-        </div>
-            <button class="no-link-style"><a href="../Login/login.html" style="text-decoration: none;color: black;"><b>LOG IN</b></a></button>
-            </nav>
-         </div>
-        </header>
+       <?php
+        include('../DatabaseConnection/DatabaseConnection.php');
+        session_start();
+        $hide="";
+        if(!isset($_SESSION['username'])){
+            header("location:../Login/login.php");
+        }
+        
+        else{
+          if($_SESSION['role'] == "admin")
+            $hide = "";
+          else
+            $hide = "hide";
+        }
+        include('../header/header.php');
+        
+        ?>
+        <li><a href="dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
         <main>
             <div class="background-color">
                 <img src="../Images/background-image.png" alt="background-image" id="background-image">
@@ -107,19 +107,9 @@
             </div>
         </main>
         <footer>
-            <hr syle="color:white;">
-            <div class="footer">
-            <p style="color: antiquewhite;">© 2023 MelodyPuzzle BE</p>
-            <p style="color: antiquewhite;">melodypuzzle@outlook.com</p>
-            <a href="https://www.instagram.com/"><img src="../Images/instagrami.png" alt=""></a>
-            <a href="https://www.facebook.com//"><img src="../Images/ffacebook.png" alt=""></a>
-            <a href="https://twitter.com/"><img src="../Images/ttwitter.jpg" alt=""></a>
-            <div class="right-side-footer">
-                <a href="../Privacy Policy/privacyPolicy.html" style="text-decoration: none; color: antiquewhite;">PRIVACY POLICY</a>
-                <a href="../Terms of Use/termsOfUse.html" style="text-decoration: none;color:  antiquewhite;">TERMS OF USE</a>
-                <a href="../Contact Us/ContactUs.html" style="text-decoration: none;color:  antiquewhite;">CONTACT US</a>
-            </div>
-            </div>
-        </footer>
+          <?php
+          include('../footer/footer.php');
+          ?>
+          </footer>
     </body>
     </html>
