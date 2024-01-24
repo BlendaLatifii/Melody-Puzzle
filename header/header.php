@@ -1,6 +1,22 @@
  <html>
- <link rel="stylesheet" href="header.css">
+ <link rel="stylesheet" href="./header.css">
  <header>
+ <?php
+        include('../DatabaseConnection/DatabaseConnection.php');
+        session_start();
+        $hide="";
+        $isLogedIn = false;
+        if(!isset($_SESSION['username'])){
+            header("location:../Login/login.php");
+        }
+        else{
+            $isLogedIn = true;
+          if(isset($_SESSION['role']) && $_SESSION['role'] == 1)
+            $hide = "";
+          else
+            $hide = "hide";
+        }
+        ?>
          <div class="header">
             <div style="display: flex; justify-content: flex-start;padding-right: 5px;">
                <a href="../Home/index.html" ><img src="../Images/logoo.png" alt="logo" style="width: 35px;"></a>
@@ -9,14 +25,26 @@
             <nav>
                 <div>
             <ul class="nav-bar">
-                <li><a href="../Home/index.php" class="Pages" style="text-decoration: none; color: antiquewhite;" ><b>HOME</b></a></li>
-                <li><a href="../Music/Music.php" class="Pages" style="text-decoration: none; color: antiquewhite;" ><b>MUSIC</b></a></li>
-                <li><a href="../About Singers/AboutSingers.php" class="Pages" style="text-decoration: none;color: antiquewhite;"><b>ABOUT SINGERS</b></a></li>
-                <li><a href="../About Us/AboutUs.php" class="Pages" style="text-decoration: none;color: antiquewhite;"><b>ABOUT US</b></a></li>
-                <li><a href="../Contact Us/contactUs.php" class="Pages" style="text-decoration: none;color: antiquewhite;"><b>CONTACT US</b></a></li>
+                <li><a href="../Home/index.php" class="Pages" ><b>HOME</b></a></li>
+                <li><a href="../Music/Music.php" class="Pages"  ><b>MUSIC</b></a></li>
+                <li><a href="../About Singers/AboutSingers.php" class="Pages"><b>ABOUT SINGERS</b></a></li>
+                <li><a href="../About Us/AboutUs.php" class="Pages" ><b>ABOUT US</b></a></li>
+                <li><a href="../Contact Us/contactUs.php" class="Pages"><b>CONTACT US</b></a></li>
+                <li><a href="../User/dashboard.php" class="Pages <?php echo $hide?>"><b>Dashbord</b></a></li>
             </ul>
         </div>
-            <button class="no-link-style"><a href="../Login/login.html" style="text-decoration: none;color: black;"><b>LOG IN</b></a></button>
+        <?php
+        if($isLogedIn){
+            ?>
+            <button class="no-link-style"><a href="../Login/logout.php" style="text-decoration: none;color: black;"><b>LOG OUT</b></a></button>
+            <?php
+        }
+        else{
+            ?>
+          <button class="no-link-style"><a href="../Login/login.php" style="text-decoration: none;color: black;"><b>LOG IN</b></a></button>
+            <?php
+        }
+        ?>
             </nav>
          </div>
     </header>

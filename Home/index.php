@@ -7,23 +7,8 @@
     </head>
     <body>
        <?php
-        include('../DatabaseConnection/DatabaseConnection.php');
-        session_start();
-        $hide="";
-        if(!isset($_SESSION['username'])){
-            header("location:../Login/login.php");
-        }
-        
-        else{
-          if($_SESSION['role'] == "admin")
-            $hide = "";
-          else
-            $hide = "hide";
-        }
         include('../header/header.php');
-        
         ?>
-        <li><a href="dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
         <main>
             <div class="background-color">
                 <img src="../Images/background-image.png" alt="background-image" id="background-image">
@@ -46,11 +31,11 @@
                         Discover, stream, and share a constantly expanding mix of music <br> from emerging and major artists around the world.
                     </p>
                     <div class="buttons">
-                        <button class="music-library"><a href="../Music/Music.html" style="color: white;">
+                        <button class="music-library"><a href="../Music/Music.php" style="color: white;">
                             Open Music Library
                             </a>
                         </button>
-                        <button class="sign-up"><a href="../SignUp/Sign up.html">Sign Up</a></button>
+                        <button class="sign-up"><a href="../SignUp/Sign up.php">Sign Up</a></button>
                     </div>
                 </div>
                 <hr style="position: relative; top: -60px; border: none; background: linear-gradient(to right , gray , black); height: 1px;">

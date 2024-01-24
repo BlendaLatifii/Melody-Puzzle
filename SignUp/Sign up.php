@@ -7,7 +7,7 @@
 <body>
   <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
     <div style="display: flex; justify-content: center; margin-top: 5px;">
-      <a href="../Home/index.html" ><img src="../Images/logoo.png" alt="logo"></a>
+      <a href="../Home/index.php" ><img src="../Images/logoo.png" alt="logo"></a>
     </div>
     <div>
         <h2>Sign Up</h2>
@@ -43,7 +43,7 @@
         <div class="inner"></div>
         <button onclick="validateForm()" name="SignUp"> Sign Up</button>
     </div>
-    <span class="psw">Already a member? <a href="../Login/login.html" style="text-decoration: none; color:rgb(28, 199, 142);padding-bottom: 10px;"><b>Log in</b></a></span>
+    <span class="psw">Already a member? <a href="../Login/login.php" style="text-decoration: none; color:rgb(28, 199, 142);padding-bottom: 10px;"><b>Log in</b></a></span>
 
   </form>
   <?php

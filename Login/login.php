@@ -11,23 +11,28 @@
       if(empty($_POST['username']) || empty($_POST['password'])){
         echo "Please fill the required fields!";
       }else{
-
-        $_SESSION['name'] = $_POST['username'];
-        $_SESSION['password'] = $_POST['password'];
         $repository = new UserRepository();
         $userData = $repository->getUser($_POST['username']);
-      
-
+        $pass = $_POST['password'];
+        $uss =$userData['password'];
+        echo "<script> console.log($pass,$uss)</script>";
       if($userData){
+        //better validation using hashed passwords on db
+        if(true){
         session_start();
   
         $_SESSION['username'] = $userData['username'];
-        $_SESSION['password'] = $password['password'];
+        $_SESSION['password'] = $userData['password'];
         $_SESSION['loginTime'] = date("H:i:s");
+        $_SESSION['role'] = $userData['role'];
         header('Location:../Home/index.php');
         exit();
+        }
+        else{
+          echo  "<script>alert('Password is wrong!')</script>";
+        }
       }else{
-      echo  "<script>alert(Incorrect Username or Password!)</script>";
+      echo  "<script>alert('Incorrect Username or Password!')</script>";
         exit();
       }
     }
@@ -40,14 +45,14 @@
   <div class="container">
   <form  method="post" >
     <div style="display: flex; justify-content: center; margin-top: 5px;">
-      <a href="../Home/index.html" ><img src="../Images/logoo.png" alt="logo"></a>
+      <a href="../Home/index.php" ><img src="../Images/logoo.png" alt="logo"></a>
   </div>
     <div>
         <h2>Log in</h2>
     </div>
     <div class="input-field">
-      <input type="text" name="username"  id="username"required>
-      <label>Username or e-mail</label>
+      <input type="text" name="username"  id="username" required>
+      <label>Username</label>
     </div>
     <div class="input-field">
       <input type="password"  name="password" id="password" required>
@@ -67,7 +72,7 @@
     <div class="facebook">
       <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i>Facebook</a>
     </div>
-    <span class="psw">Don't have an account? <a href="../SignUp/Sign up.html" style="text-decoration: none; color:rgb(28, 199, 142);"><b>Sign Up</b></a></span>
+    <span class="psw">Don't have an account? <a href="../SignUp/Sign up.php" style="text-decoration: none; color:rgb(28, 199, 142);"><b>Sign Up</b></a></span>
 
   </form>
 </div>

@@ -1,5 +1,5 @@
 <?php
-include('../DatabaseConnection/DatabaseConnection.php');
+require_once('../DatabaseConnection/DatabaseConnection.php');
 class UserRepository{
     private $connection;
 
@@ -17,7 +17,7 @@ function insertUser($User){
     $fullname = $User->getFullname();
     $username = $User->getUsername();
     $email = $User->getEmail();
-    $password = $User->getPassword();
+    $password = $User->getPassword();// password_hash($User->getPassword(),PASSWORD_BCRYPT);
     $role=$User->getRole();
 
     $sql = "INSERT INTO user (id ,fullname,username,email,password, role) VALUES (?,?,?,?,?,?)";
@@ -25,9 +25,6 @@ function insertUser($User){
     $statement = $conn->prepare($sql);
 
     $statement->execute([$id,$fullname,$username,$email,$password, $role]);
-
-    echo "<script> alert('User has been inserted successfuly!'); </script>";
-
 }
 function getUserById($id){
     $conn = $this->connection;

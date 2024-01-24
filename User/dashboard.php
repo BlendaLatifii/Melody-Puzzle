@@ -3,8 +3,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../header/header.css">
     <title>Dashboard</title>
 </head>
+<?php 
+             include_once '../header/header.php';
+?>
 <body><style>
         body {
             font-family: Arial, sans-serif;
@@ -36,16 +40,15 @@
             background-color: #f5f5f5;
         }
 
-        a {
+        /* a {
             text-decoration: none;
             color: #3498db;
         }
 
         a:hover {
             color: #e74c3c;
-        }
+        } */
     </style>
-    
 
     <table border="1">
              <tr>
@@ -83,10 +86,21 @@
                 </tr>
                 ";
              }
-
-             
-             
              ?>
     </table>
+    <table border="1">
+             <tr>
+                <th>ID</th>
+                 <th>FULLNAME</th>
+                 <th>EMAIL</th>
+                 <th>SUBJECT</th>
+                 <th>MESSAGE</th>
+                 <th>Edit</th>
+                 <th>Delete</th>
+                 
+             </tr>
+
+             </table>         
+
 </body>
 </html>

@@ -25,8 +25,8 @@
         <h3 class="left-side-text">Send us a message!</h3>
         <div class="contact-us">
             <form>
-            <input type="text" name="username" required style="padding: 10px 0; width: 100%; border: none; border-bottom: 1px solid gray; outline: none; border-radius: 5px;">
-            <label for="username">Full name*</label>
+            <input type="text" name="fullname" required style="padding: 10px 0; width: 100%; border: none; border-bottom: 1px solid gray; outline: none; border-radius: 5px;">
+            <label for="fullname">Full name*</label>
             <br>
             <br>
             
