@@ -8,20 +8,9 @@
 </head>
 <body>
     <header>
-        <div class="header">
-           <h1 class="logo">MelodyPuzzle</h1>
-           <nav>
-               <div>
-           <ul class="nav-bar">
-            <li><a href=".../index.html" class="Pages" style="text-decoration: none;" ><b>HOME</b></a></li>
-            <li><a href="../About Us/AboutUs.html" class="Pages" style="text-decoration: none;"><b>ABOUT US</b></a></li>
-            <li><a href="../Contact Us/contactUs.html" class="Pages" style="text-decoration: none;"><b>CONTACT US</b></a></li>
-            <li><a href="../Music/Music.html" class="Pages" style="text-decoration: none;"><b>MUSIC</b></a></li>  
-        </ul>
-       </div>
-           </nav>
-        </div>
-        <hr>
+    <?php
+            include '../header/header.php';
+        ?>
        </header>
     <br>
     <main>
@@ -117,15 +106,8 @@
     </div>
     <br>
 </main>
-    <footer>
-        <hr>
-        <div class="footer">
-        <p>© 2023 MelodyPuzzle BE</p>
-        <div class="right-side-footer">
-            <a href="../Privacy Policy/privacyPolicy.html" style="text-decoration: none;">PRIVACY POLICY</a>
-            <a href="../Terms of Use/termsOfUse.html" style="text-decoration: none;">TERMS OF USE</a>
-        </div>
-        </div>
-    </footer>
+<?php
+            include '../footer/footer.php';
+        ?>
 </body>
 </html>
