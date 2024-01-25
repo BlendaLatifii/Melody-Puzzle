@@ -50,6 +50,15 @@
     public function setRole($role){
         $this->role=$role;
     }
+
+    public function isValid()
+    {
+        if(empty($this->fullname) || empty($this->username) || empty($this->email) || empty($this->password)){
+            return false;
+        }
+
+        return true;
+    }
    
     public function __toString(){
         return "id:".$this->id."fullname".$this->fullname."username".$this->username."email:".$this->email."password".$this->password."role".$this->role;

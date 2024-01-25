@@ -9,8 +9,8 @@
             display: flex;
             flex-direction: column;
             background: url(../Images/bg.jpg);
-  background-size: cover;
-  background-position: center;
+            background-size: cover;
+            background-position: center;
         }
         form {
             width: 50%;
@@ -90,7 +90,7 @@ if(isset($_POST["AddSong"]))
 
     $songReposiitory = new SongsRepository();
 
-    $songReposiitory->insertSong($song);
+    $songReposiitory->insertSong($song,$_SESSION['id']);
     header("Location:../User/dashboard.php");
 }
 ?>

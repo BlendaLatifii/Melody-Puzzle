@@ -11,6 +11,9 @@
     font-size: x-large;
     margin:0;
 }
+.hide{
+    display: none;
+}
 
 a{
     text-transform: none;

@@ -8,7 +8,7 @@
     height: 1100px;
 }
 
-#background-image{
+#background-image {
     display: flex;
     width: 50%;
     position: relative;
@@ -16,27 +16,35 @@
     top: 60px;
 }
 
-.music-library{
+
+
+.sign-up {
     padding: 15px;
     border-radius: 20px;
-    background: transparent;
     border-color: aliceblue;
     border-style: double;
     border-width: thin;
     position: relative;
-    top: -250px;
+    top: -250px; 
+    left: 0; 
+    width: 80%; 
+    margin: 0 auto; 
+}
+@media screen and (max-width: 768px) {
+    #artist {
+        flex-wrap: wrap; 
+    }
+
+    .round-img {
+        width: 45%; 
+        margin-bottom: 20px; 
+    }
+
+    .main-text {
+        width: 100%; 
+    }
 }
 
-.sign-up{
-    padding: 15px;
-    border-radius: 20px;
-    border-color: aliceblue;
-    border-style: double;
-    border-width: thin;
-    position: relative;
-    top: -250px;
-    left: 20px;
-}
 
 #artist{
     display: flex;
@@ -239,3 +247,4 @@
    border: 3px solid blue;
    
 }
+

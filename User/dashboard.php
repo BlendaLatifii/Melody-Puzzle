@@ -156,6 +156,8 @@
                  <th>ARTIST</th>
                  <th>GENRE</th>
                  <th>PUBLICATION DATE</th>
+                 <th>Added By</th>
+                 <th>Edit</th>
                  <th>Delete</th>
                  
              </tr>
@@ -176,6 +178,8 @@
             <td>$songs[artist] </td>
             <td>$songs[genre] </td>
             <td>$songs[publicationDate] </td>
+            <td>$songs[fullname]</td>
+            <td><a href='../Music/editSong.php?id=$songs[Id]'>Edit</a> </td>
             <td><a href='../Music/deleteSong.php?id=$songs[Id]'>Delete</a></td>
             
             </tr>
@@ -185,7 +189,39 @@
 
          </table>   
          
-         
+         <div class="div">
+         <table border="1">
+        
+        <tr>
+            
+            <th>TITLE</th>
+            <th>ARTIST</th>
+           <th>VIEWS</th>
+            
+        </tr>
+
+         <?php
+           
+       
+       $views= $songsRepository->getAllViews();;
+
+
+
+   foreach ($views as $view) {
+       echo "
+       <tr>
+       <td>$view[title]</td>
+       <td>$view[artist] </td>
+       <td>$view[NR]</td>
+       
+       
+       </tr>
+       ";
+    }
+    ?>
+
+    </table>   
+         </div>
 
 
 </body>

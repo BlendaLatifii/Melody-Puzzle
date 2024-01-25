@@ -68,6 +68,26 @@ ul:hover a:hover{
         margin-top: 10px;
     }
 }
+@media only screen and (max-width: 200px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-bar li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .no-link-style {
+        margin-top: 10px;
+    }
+}
 .no-link-style:hover{
     background-color: rgb(216, 213, 213);
 }

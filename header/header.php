@@ -27,7 +27,7 @@
             <ul class="nav-bar">
                 <li><a href="../Home/index.php" class="Pages" ><b>HOME</b></a></li>
                 <li><a href="../Music/Music.php" class="Pages"  ><b>MUSIC</b></a></li>
-                <li><a href="../About Singers/AboutSingers.php" class="Pages"><b>ABOUT SINGERS</b></a></li>
+                <li><a href="../About Singer/ourArtists.php" class="Pages"><b>ABOUT SINGERS</b></a></li>
                 <li><a href="../About Us/AboutUs.php" class="Pages" ><b>ABOUT US</b></a></li>
                 <li><a href="../Contact Us/contactUs.php" class="Pages"><b>CONTACT US</b></a></li>
                 <li><a href="../User/dashboard.php" class="Pages <?php echo $hide?>"><b>DASHBOARD</b></a></li>

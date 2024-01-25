@@ -12,23 +12,55 @@
   <header>
        <?php
         include('../header/header.php');
+        include('../Music/songsRepository.php');
+        $id = intval($_GET['id']);
+        $repo = new SongsRepository();
+        $song = $repo->getSongById($id);
+        $nextSong = $repo->getNextSong($id);
+        $nextSongId = -1;
+        $prevSong = $repo->getPrevSong($id);
+        $prevSongId =-1;
+        if(!empty($nextSong)){
+          $nextSongId = $nextSong['Id'];
+        }
+
+        if(!empty($prevSong)){
+        $prevSongId = $prevSong['Id'];
+        }
+        $repo->saveView($id,$_SESSION['id']);
         ?>
   </header>      
   <main>
     <div class="container">
     <audio id="music" loop>
-        <source src="" id="music" type="audio/mp3" />
+        <source src="<?php echo '../songs/'.$song['Music']?>" id="music" type="audio/mp3" />
       </audio>
-        <img id="main-image" src=""/>
+        <img id="main-image" src="<?php echo '../Images/'.$song['Photo']?>"/>
         <span id="timer">0:00</span>
       
         <div class="playlist-container">
-            <button class="playlist-button" id="prevBtn" style="color:black; margin-right: 40px;"><i class="fa fa-backward" aria-hidden="true"></i></button>
+          <?php
+          if($prevSongId != -1){
+
+            ?>
+<button class="playlist-button" id="prevBtn" onclick="nextSong(<?php echo $prevSongId ?>)" style="color:black; margin-right: 40px;"><i class="fa fa-backward" aria-hidden="true"></i></button>
+
+            <?php
+          }
+          ?>
             <button class="playlist-button" id="prevButton"  style="color:red"onclick="backTenSeconds()"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
             <button class="playlist-button" id="playPauseBtn" style="color:green" onclick="togglePlayPause()"><i class="fa fa-play" aria-hidden="true"></i></button>
             <button class="playlist-button" id="nextButton" style="color:red"  onclick="skipForward()"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
-            <button class="playlist-button" id="nextBtn" style="color:green;margin-left:40px;"><i class="fa fa-forward" aria-hidden="true"></i></button>
-        </div>
+            <?php
+          if($nextSongId != -1){
+
+            ?>
+  <button class="playlist-button"  onclick="nextSong(<?php echo $nextSongId ?>)"id="nextBtn" style="color:green;margin-left:40px;"><i class="fa fa-forward" aria-hidden="true"></i></button>
+
+            <?php
+          }
+          ?>
+          </div>
 </div>
   </main>
 
@@ -45,16 +77,16 @@
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+//     document.addEventListener('DOMContentLoaded', function() {
 
-    var storedItem = localStorage.getItem('music-key');
+//     var storedItem = localStorage.getItem('music-key');
 
     
-    if (storedItem !== null) {
-       document.getElementById('main-image').src = `../Images/${storedItem}.jpg`;
-       document.getElementById('music').src = `../songs/${storedItem}.mp3`;
-    }
-});
+//     if (storedItem !== null) {
+//        document.getElementById('main-image').src = `../Images/${storedItem}.jpg`;
+//        document.getElementById('music').src = `../songs/${storedItem}.mp3`;
+//     }
+// });
   let music = document.getElementById("music");
       let playPauseBtn = document.getElementById("playPauseBtn");
       let timer = document.getElementById("timer");
@@ -77,7 +109,23 @@
         updateTimer();
       }
 
+
       function backTenSeconds() {
+        if (music.currentTime >= 10) {
+          music.currentTime -= 10;
+          updateTimer();
+        }
+      }
+      function nextSong(value)
+      {
+        element = document.createElement('a');
+        element.href = '/Melody-puzzle/Music2/Music2.php?id='+value;
+        document.body.appendChild(element);
+        localStorage.setItem('music-key',value);
+        element.click();
+      }
+
+      function nextTenSeconds() {
         if (music.currentTime >= 10) {
           music.currentTime -= 10;
           updateTimer();
@@ -97,31 +145,8 @@
       let currentItem = +localStorage.getItem('music-key');
       prevBtn.style.backgroundColor = "red";
 
-      document.getElementById("prevBtn").addEventListener("click", function() {
-         if(currentItem == 1)
-         {
-            currentItem = maxItem;
-         }
-         else{
-            currentItem--;
-         }
-
-         updateContent() ; 
-      });
-      document.getElementById("nextBtn").addEventListener("click", function() {
-        if(currentItem == maxItem)
-        {
-            currentItem = 1;
-        }
-        else{
-            currentItem++;
-        }
-         updateContent() ;
-      });
       function updateContent() {
-         document.getElementById('main-image').src = `../Images/${currentItem}.jpg`;
          let music =  document.getElementById('music');
-       music.src = `../songs/${currentItem}.mp3`;
        music.play();
        playPauseBtn.textContent="Pause"
        updateTimer();

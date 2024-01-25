@@ -78,7 +78,7 @@
                 ?>
                 <div class="slide">
                     <div onclick="changeRoute('<?php echo $song['Id']?>')" class="song">
-                          <a onclick="changeRoute('<?php echo $song['Id']?>')"><img src="../Images/<?php echo $song['Photo']?>" alt="Tayna" class="img"/></a>
+                          <a onclick="changeRoute('<?php echo $song['Id']?>')"><img src="../Images/<?php echo $song['Photo']?>" alt="ddd" class="img"/></a>
                         <h4><?php echo $song['artist']?></h4>
                         <p><?php echo $song['title']?></p>
                       </div>
@@ -104,7 +104,7 @@
       function changeRoute(value)
       {
         element = document.createElement('a');
-        element.href = '/Melody-puzzle/Music2/Music2.php';
+        element.href = '/Melody-puzzle/Music2/Music2.php?id='+value;
         document.body.appendChild(element);
         localStorage.setItem('music-key',value);
         element.click();

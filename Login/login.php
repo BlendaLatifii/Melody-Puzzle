@@ -14,13 +14,11 @@
         $repository = new UserRepository();
         $userData = $repository->getUser($_POST['username']);
         $pass = $_POST['password'];
-        $uss =$userData['password'];
-        echo "<script> console.log($pass,$uss)</script>";
+        $uss = $userData['password'];
       if($userData){
-        //better validation using hashed passwords on db
-        if(true){
+        if(password_verify($pass,$uss)){
         session_start();
-  
+        $_SESSION['id'] = $userData['id'];
         $_SESSION['username'] = $userData['username'];
         $_SESSION['password'] = $userData['password'];
         $_SESSION['loginTime'] = date("H:i:s");

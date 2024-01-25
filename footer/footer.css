@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background: linear-gradient(to right,black,gray);
+    
 }
 
 .right-side-footer {
@@ -27,7 +27,7 @@
     color: burlywood;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 200px) {
     .footer {
         flex-direction: row;
     }
