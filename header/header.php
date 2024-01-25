@@ -1,8 +1,8 @@
  <html>
- <link rel="stylesheet" href="./header.css">
+ <link rel="stylesheet" href="../header/header.css">
  <header>
  <?php
-        include('../DatabaseConnection/DatabaseConnection.php');
+        require_once('../DatabaseConnection/DatabaseConnection.php');
         session_start();
         $hide="";
         $isLogedIn = false;
@@ -19,7 +19,7 @@
         ?>
          <div class="header">
             <div style="display: flex; justify-content: flex-start;padding-right: 5px;">
-               <a href="../Home/index.html" ><img src="../Images/logoo.png" alt="logo" style="width: 35px;"></a>
+               <a href="../Home/index.php" ><img src="../Images/logoo.png" alt="logo" style="width: 35px;"></a>
            <h1 class="logo">MelodyPuzzle</h1>
             </div>
             <nav>
@@ -30,7 +30,7 @@
                 <li><a href="../About Singers/AboutSingers.php" class="Pages"><b>ABOUT SINGERS</b></a></li>
                 <li><a href="../About Us/AboutUs.php" class="Pages" ><b>ABOUT US</b></a></li>
                 <li><a href="../Contact Us/contactUs.php" class="Pages"><b>CONTACT US</b></a></li>
-                <li><a href="../User/dashboard.php" class="Pages <?php echo $hide?>"><b>Dashbord</b></a></li>
+                <li><a href="../User/dashboard.php" class="Pages <?php echo $hide?>"><b>DASHBOARD</b></a></li>
             </ul>
         </div>
         <?php

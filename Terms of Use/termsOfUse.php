@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="termsOfUse.css">
+    <link rel="stylesheet" href="../Terms of Use/termsOfUse.css">
     <title>MelodyPuzzle-Terms of Use</title>
 </head>
 <body>
     <header>
        <?php
-        include('../header/header.php');
+         include_once '../header/header.php';
         ?>
     </header>    
     <main>
@@ -158,7 +158,7 @@
                 While adapting to the evolving digital landscape, we remain committed to upholding the core principles that safeguard your privacy, security, and overall user experience. 
                 Any modifications are made with careful consideration of maintaining the integrity of the musical haven we've collectively crafted.</p>
             <h2 class="toe">10. Contact Information</h2>
-            <p class="terms">If you have any questions or concerns about these Terms, please contact us at <a href="../Contact Us/contactUs.html"> Contact Us </a>.</p>
+            <p class="terms">If you have any questions or concerns about these Terms, please contact us at <a href="../Contact Us/contactUs.php"> Contact Us </a>.</p>
             </div>
     </main>
     <footer>

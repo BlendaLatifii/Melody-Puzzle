@@ -6,7 +6,7 @@
     private $subject;
     private $message;
  
-    public function __construct( $id,$fullname,$email , $subject, $message){
+    public function __construct( $id,$fullname,$email,$subject, $message){
         $this->id=$id;
         $this->fullname=$fullname;
         $this->email=$email;

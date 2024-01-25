@@ -65,7 +65,7 @@
             Any significant changes will be communicated by posting an updated policy on our website.
              We encourage you to review this policy regularly to stay informed about how we handle your information.</p>
         <p class="paragraphs"> Your privacy matters to us, and we are committed to addressing any inquiries promptly.
-            If you have any questions, concerns, or requests regarding this Privacy Policy, please feel free to contact us at <a href="../Contact Us/contactUs.html">Contact Us</a></p>
+            If you have any questions, concerns, or requests regarding this Privacy Policy, please feel free to contact us at <a href="../Contact Us/contactUs.php">Contact Us</a></p>
         </div>
     </main>
     <footer>

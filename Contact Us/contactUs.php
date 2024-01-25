@@ -24,7 +24,7 @@
     <div class="left-side">
         <h3 class="left-side-text">Send us a message!</h3>
         <div class="contact-us">
-            <form>
+            <form  action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
             <input type="text" name="fullname" required style="padding: 10px 0; width: 100%; border: none; border-bottom: 1px solid gray; outline: none; border-radius: 5px;">
             <label for="fullname">Full name*</label>
             <br>
@@ -34,7 +34,7 @@
             <label for="email">Email address*</label>
             <br>
             <br>
-            <input type="text" name="Subject" style="padding: 10px 0; width: 100%; border: none; border-bottom: 1px solid gray; outline: none; border-radius: 5px;">
+            <input type="text" name="subject" style="padding: 10px 0; width: 100%; border: none; border-bottom: 1px solid gray; outline: none; border-radius: 5px;">
             <label for="Subject">Subject</label>
             <br>
             <p style="font-size: x-large;font-family: system-ui;font-weight: 700;letter-spacing: -1px;color: darkred;">Tell us more about your concern.</p>
@@ -43,10 +43,13 @@
             <label for="message">Message</label>
             <br>
             <br>
-            <button type="submit" style="border: 1px solid transparent; border-radius: 8px; padding: 14px 25px; text-transform: uppercase; cursor: pointer; background-color: rgb(18, 29, 128);color: aliceblue;" onclick="validateContact()">Send message</button>
+            <button type="submit" style="border: 1px solid transparent; border-radius: 8px; padding: 14px 25px; text-transform: uppercase; cursor: pointer; background-color: rgb(18, 29, 128);color: aliceblue;" onclick="validateContact()" name="submit">Send message</button>
         </form>
         </div>
     </div>
+    <?php
+  include_once '../Contact Us/process_contact.php';
+ ?>
     </main>
     <footer>
         <?php

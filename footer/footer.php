@@ -1,5 +1,5 @@
 <html>
-<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="../footer/footer.css">
 <footer>
             <hr syle="color:white;">
             <div class="footer">

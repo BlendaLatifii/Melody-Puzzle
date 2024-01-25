@@ -2,9 +2,6 @@
     margin: 0%;
     padding: 0%;
 }
-.hide{
-    display:none;
-}
 
 .background-color{
     background: linear-gradient(to right,black,gray);

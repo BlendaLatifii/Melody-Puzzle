@@ -3,13 +3,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../header/header.css">
     <title>Dashboard</title>
 </head>
 <?php 
              include_once '../header/header.php';
 ?>
-<body><style>
+<body>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -39,15 +39,36 @@
         tr:hover {
             background-color: #f5f5f5;
         }
-
-        /* a {
+         .end{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+         }
+         .width-90{
+            width: 90%;
+         }
+         button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        /*
+        a {
             text-decoration: none;
             color: #3498db;
         }
 
         a:hover {
             color: #e74c3c;
-        } */
+        }*/ 
     </style>
 
     <table border="1">
@@ -95,12 +116,77 @@
                  <th>EMAIL</th>
                  <th>SUBJECT</th>
                  <th>MESSAGE</th>
-                 <th>Edit</th>
                  <th>Delete</th>
                  
              </tr>
 
-             </table>         
+              <?php
+                 include_once '../Contact Us/ContactRepository.php';
+                 $contactRepository=  new ContactRepository();
+            
+            $contacts = $contactRepository->getAllContacts();
+    
+
+
+        foreach ($contacts as $contact) {
+            echo "
+            <tr>
+            <td>$contact[id]</td>
+            <td>$contact[fullname]</td>
+            <td>$contact[email] </td>
+            <td>$contact[subject] </td>
+            <td>$contact[message] </td>
+            <td><a href='../Contact Us/deleteContact.php?id=$contact[id]'>Delete</a></td>
+            
+            </tr>
+            ";
+         }
+         ?>
+
+         </table>  
+         
+         <div class="end width-90">
+    <button ><a href="../Music/AddSong.php" class="Pages <?php echo $hide?>"><b>Add new Song</b></a></button>
+</div>
+         <table border="1">
+        
+             <tr>
+                 <th>ID</th>
+                 <th>TITLE</th>
+                 <th>ARTIST</th>
+                 <th>GENRE</th>
+                 <th>PUBLICATION DATE</th>
+                 <th>Delete</th>
+                 
+             </tr>
+
+              <?php
+                 include_once '../Music/songsRepository.php';
+                 $songsRepository=  new songsRepository();
+            
+            $song = $songsRepository->getAllSongs();
+    
+   
+
+        foreach ($song as $songs) {
+            echo "
+            <tr>
+            <td>$songs[Id]</td>
+            <td>$songs[title]</td>
+            <td>$songs[artist] </td>
+            <td>$songs[genre] </td>
+            <td>$songs[publicationDate] </td>
+            <td><a href='../Music/deleteSong.php?id=$songs[Id]'>Delete</a></td>
+            
+            </tr>
+            ";
+         }
+         ?>
+
+         </table>   
+         
+         
+
 
 </body>
 </html>

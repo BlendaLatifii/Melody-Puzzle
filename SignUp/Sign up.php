@@ -47,7 +47,7 @@
 
   </form>
   <?php
-  include_once '../User/RController.php';
+  include_once '../User/RegjisterController.php';
  ?>
 
 
@@ -68,7 +68,7 @@
             alert("Enter a valid name");
             return false;
           }
-          //var emailRegex=/w[a-zA-Z\s@][0-9]+@[^\s@]+\. w[2-4]+$/;
+         
           var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
           console.log(email,emailRegex.test(email));
           if(!emailRegex.test(email)){

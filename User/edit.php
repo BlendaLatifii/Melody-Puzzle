@@ -1,9 +1,6 @@
 <?php
 $userId = $_GET['id'];
 include_once './userRepository.php';
-
-
-
 $userRepository = new UserRepository();
 
 $user  = $userRepository->getUserById($userId);
@@ -19,16 +16,11 @@ $user  = $userRepository->getUserById($userId);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="../SignUop">
-    <link rel="stylesheet" href="../SignUp/Sign Up.css">
 </head>
 <body>
-<h3 style="color: #3498db;
-            margin-bottom: 20px;">Edit User</h3>
 <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
             margin: 0;
             padding: 0;
             display: flex;
@@ -38,7 +30,7 @@ $user  = $userRepository->getUserById($userId);
         }
 
         .container {
-            text-align: center;
+            text-align:start;
         }
 
         form {
@@ -61,22 +53,32 @@ $user  = $userRepository->getUserById($userId);
         }
 
         input[type="submit"] {
-            background-color: #3498db;
+            background-color:#3498db;
             color: white;
             cursor: pointer;
         }
 
         input[type="submit"]:hover {
-            background-color: #2980b9;
+            background-color:cornflowerblue;
         }
+        
+      
     </style>
     <form action="" method="post">
-        <input type="text" name="id"  value="<?=$user['id']?>" readonly> <br> <br>
-        <input type="text" name="fullname"  value="<?=$user['fullname']?>"> <br> <br>
-        <input type="text" name="username"  value="<?=$user['username']?>"> <br> <br>
-        <input type="text" name="email"  value="<?=$user['email']?>"> <br> <br>
-        <input type="text" name="password"  value="<?=$user['password']?>"> <br> <br>
-        <input type="text" name="role"  value="<?=$user['role']?>"> <br> <br>
+    <h3 style="color: #3498db;
+            margin-bottom: 10px;">Edit User</h3>
+        <label class="input-field">ID</label>
+        <input type="text" name="id"  value="<?=$user['id']?>" readonly> <br>
+        <label class="input-field">Full name</label>
+        <input type="text" name="fullname"  value="<?=$user['fullname']?>"> <br> 
+        <label class="input-field">Username</label>
+        <input type="text" name="username"  value="<?=$user['username']?>"> <br> 
+        <label class="input-field">E-mail</label>
+        <input type="text" name="email"  value="<?=$user['email']?>"> <br>
+        <label class="input-field">Password</label>
+        <input type="text" name="password"  value="<?=$user['password']?>"> <br>
+        <label class="input-field">Role</label>
+        <input type="text" name="role"  value="<?=$user['role']?>"> <br>
 
         <input type="submit" name="editBtn" value="save"> <br> <br>
     </form>

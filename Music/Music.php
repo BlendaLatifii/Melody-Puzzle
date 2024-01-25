@@ -14,6 +14,9 @@
     <header>
        <?php
         include('../header/header.php');
+        include('./songsRepository.php');
+        $repo = new SongsRepository();
+        $songs = $repo->getAllSongs();
         ?>
     </header>    
     <div class="search-bar">
@@ -32,111 +35,18 @@
       
           <div class="innerContainer active">
               <div class="slider">
-                  <div class="slide">
-                    <div onclick="changeRoute('1')" class="song">
-                          <a onclick="changeRoute('1')"><img src="../Images//1.jpg" alt="Tayna" class="img"/></a>
-                        <h4>Tayna</h4>
-                        <p>Merri</p>
-                      </div>
-                </div>
-                  <div class="slide">
-                    <div onclick="changeRoute('2')" class="song">
-                        <a onclick="changeRoute('2')"><img src="../Images//2.jpg" alt="Capital" class="img"/></a>
-                        <h4>Capital T</h4>
-                        <p>Zani i popullit</p>
-                      </div>
-                </div>
-                  <div class="slide">
-                    <div onclick="changeRoute('3')" class="song">
-                        <a onclick="changeRoute('3')"><img src="../Images//3.jpg" alt="Kida" class="img"/></a>
-                        <h4>Kida</h4>
-                        <p>Leje</p>
-                      </div>
-                </div>
-                  <div class="slide">
-                    <div onclick="changeRoute('4')" class="song">
-                        <a onclick="changeRoute('4')"><img src="../Images//4.jpg" alt="Ledri" class="img"/></a>
-                        <h4>Ledri Vula</h4>
-                        <p>1 Goat per ty</p>
-                      </div>
-                </div>
-                  <div class="slide">
-                    <div  onclick="changeRoute('5')"  class="song">
-                        <a onclick="changeRoute('5')"><img src="../Images//5.jpg" alt="Butrint Imeri-Lejla" class="img"/></a>
-                        <h4>Butrint Imeri</h4>
-                        <p>Lejla</p>
-                      </div>
-                      </div>
-                  <div class="slide">
-                    <div onclick="changeRoute('6')"   class="song">
-                        <a onclick="changeRoute('6')"><img src="../Images//6.jpg" alt="Capital T hera e fundit" class="img"/></a>
-                        <h4>Capital T</h4>
-                        <p>Hera e fundit</p>
-                      </div>
-                  </div>
-                  <div class="slide">
-                    <div onclick="changeRoute('7')"  class="song">
-                      <a onclick="changeRoute('7')"><img  src="../Images//7.jpg" alt="Majk- e pa shpirt" class="img" /></a>
-                          <h4>Majk</h4>
-                          <p>E pa shpirt</p>
-                    </div>
-                  </div>
-
-                  <div class="slide">
-                    <div onclick="changeRoute('8')" class="song">
-                        <a onclick="changeRoute('8')"><img src="../Images//8.jpg" alt="Era Istrefi- idiot" class="img" /></a>
-                         <h4>Era Istrefi</h4>
-                         <p>Idiot</p>
-                    </div>
-                  </div>
-                  <div class="slide">
-                    <div onclick="changeRoute('9')"  class="song">
-                        <a onclick="changeRoute('9')"><img src="../Images//9.jpg" alt="Dhurata-Yummy" class="img"/></a>
-                        <h4>INNA x Dhurata Dora x Stefflon Don </h4>
-                        <p>Yummy</p>
-                      </div>
-                  </div>
-                  <div class="slide">
-                    <div onclick="changeRoute('10')" class="song">
-                        <a onclick="changeRoute('10')"><img src="../Images//10.jpg" alt="Ylli Limani Loredana" class="img"/></a>
-                        <h4>Yll Limani x Loredana</h4>
-                        <p>Kriminele</p>
-                      </div>
-                  </div>
-                  <div class="slide">
-                    <div onclick="changeRoute('11')" class="song">
-                        <a onclick="changeRoute('11')"><img src="../Images//11.jpg" alt="Butrint Imeri" class="img" /></a>
-                         <h4>Butrint Imeri</h4>
-                         <p>Lule e dashnise</p>
-                    </div>
-                  </div>
+                <?php
+                foreach ($songs as $song) {
+                ?>
                 <div class="slide">
-                  <div onclick="changeRoute('12')" class="song">
-                    <a onclick="changeRoute('12')"><img src="../Images//12.jpg" alt="Kida Dafina" class="img"/></a>
-                    <h4>Kida x Dafina Zeqiri</h4>
-                    <p>Ai Me Mu So</p>
-                  </div>
-                </div>
-                <div class="slide">
-                    <div onclick="changeRoute('13')"  class="song">
-                        <a onclick="changeRoute('13')"><img src="../Images//13.jpg" alt="Fifi" class="img"/></a>
-                        <h4>Fifi</h4>
-                        <p>Presje</p>
+                    <div onclick="changeRoute('<?php echo $song['Id']?>')" class="song">
+                          <a onclick="changeRoute('<?php echo $song['Id']?>')"><img src="../Images/<?php echo $song['Photo']?>" alt="Tayna" class="img"/></a>
+                        <h4><?php echo $song['artist']?></h4>
+                        <p><?php echo $song['title']?></p>
                       </div>
-                </div>
-                <div class="slide">
-                    <div onclick="changeRoute('14')"  class="song">
-                        <a onclick="changeRoute('14')"><img src="../Images//14.jpg" alt="Ylli" class="img"/></a>
-                        <h4>Yll Limani</h4>
-                        <p>Ulu</p>
-                      </div>
-                </div>
-                <div class="slide">
-                    <div onclick="changeRoute('15')"  class="song">
-                        <a onclick="changeRoute('15')"><img src="../Images//15.jpg" alt="Elvana" class="img" /></a>
-                        <h4>Dhurata Dora x Elvana Gjata</h4>
-                        <p>Luj</p>
-                      </div>
+                      <?php
+                }
+                ?>
                 </div>
               </div>
       
@@ -163,112 +73,19 @@
 
     <div class="latest hidden">
         <div class="Artists">
-            <div class="slide">
-              <div onclick="changeRoute('1')" class="song">
-                    <a onclick="changeRoute('1')"><img src="../Images//1.jpg" alt="Tayna" class="img"/></a>
-                  <h4>Tayna</h4>
-                  <p>Merri</p>
+        <?php
+                foreach ($songs as $song) {
+                ?>
+                <div class="slide">
+                    <div onclick="changeRoute('<?php echo $song['Id']?>')" class="song">
+                          <a onclick="changeRoute('<?php echo $song['Id']?>')"><img src="../Images/<?php echo $song['Photo']?>" alt="Tayna" class="img"/></a>
+                        <h4><?php echo $song['artist']?></h4>
+                        <p><?php echo $song['title']?></p>
+                      </div>
+                      <?php
+                }
+                ?>
                 </div>
-          </div>
-            <div class="slide">
-              <div onclick="changeRoute('2')" class="song">
-                  <a onclick="changeRoute('2')"><img src="../Images//2.jpg" alt="Capital" class="img"/></a>
-                  <h4>Capital T</h4>
-                  <p>Zani i popullit</p>
-                </div>
-          </div>
-            <div class="slide">
-              <div onclick="changeRoute('3')" class="song">
-                  <a onclick="changeRoute('3')"><img src="../Images//3.jpg" alt="Kida" class="img"/></a>
-                  <h4>Kida</h4>
-                  <p>Leje</p>
-                </div>
-          </div>
-            <div class="slide">
-              <div onclick="changeRoute('4')" class="song">
-                  <a onclick="changeRoute('4')"><img src="../Images//4.jpg" alt="Ledri" class="img"/></a>
-                  <h4>Ledri Vula</h4>
-                  <p>1 Goat per ty</p>
-                </div>
-          </div>
-            <div class="slide">
-              <div  onclick="changeRoute('5')"  class="song">
-                  <a onclick="changeRoute('5')"><img src="../Images//5.jpg" alt="Butrint Imeri-Lejla" class="img"/></a>
-                  <h4>Butrint Imeri</h4>
-                  <p>Lejla</p>
-                </div>
-                </div>
-            <div class="slide">
-              <div onclick="changeRoute('6')"   class="song">
-                  <a onclick="changeRoute('6')"><img src="../Images//6.jpg" alt="Capital T hera e fundit" class="img"/></a>
-                  <h4>Capital T</h4>
-                  <p>Hera e fundit</p>
-                </div>
-            </div>
-            <div class="slide">
-              <div onclick="changeRoute('7')"  class="song">
-                <a onclick="changeRoute('7')"><img  src="../Images//7.jpg" alt="Majk- e pa shpirt" class="img" /></a>
-                    <h4>Majk</h4>
-                    <p>E pa shpirt</p>
-              </div>
-            </div>
-
-            <div class="slide">
-              <div onclick="changeRoute('8')" class="song">
-                  <a onclick="changeRoute('8')"><img src="../Images//8.jpg" alt="Era Istrefi- idiot" class="img" /></a>
-                   <h4>Era Istrefi</h4>
-                   <p>Idiot</p>
-              </div>
-            </div>
-            <div class="slide">
-              <div onclick="changeRoute('9')"  class="song">
-                  <a onclick="changeRoute('9')"><img src="../Images//9.jpg" alt="Dhurata-Yummy" class="img"/></a>
-                  <h4>INNA x Dhurata Dora x Stefflon Don</h4>
-                  <p>Yummy</p>
-                </div>
-            </div>
-            <div class="slide">
-              <div onclick="changeRoute('10')" class="song">
-                  <a onclick="changeRoute('10')"><img src="../Images//10.jpg" alt="Ylli Limani Loredana" class="img"/></a>
-                  <h4>Yll Limani x Loredana</h4>
-                  <p>Kriminele</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div onclick="changeRoute('11')" class="song">
-                    <a onclick="changeRoute('11')"><img src="../Images//11.jpg" alt="Butrint Imeri" class="img" /></a>
-                     <h4>Butrint Imeri</h4>
-                     <p>Lule e dashnise</p>
-                </div>
-              </div>
-          <div class="slide">
-            <div onclick="changeRoute('12')" class="song">
-              <a onclick="changeRoute('12')"><img src="../Images//12.jpg" alt="Kida Dafina" class="img"/></a>
-              <h4>Kida x Dafina Zeqiri</h4>
-              <p>Ai Me Mu So</p>
-            </div>
-          </div>
-          <div class="slide">
-              <div onclick="changeRoute('13')"  class="song">
-                  <a onclick="changeRoute('13')"><img src="../Images//13.jpg" alt="Fifi" class="img"/></a>
-                  <h4>Fifi</h4>
-                  <p>Presje</p>
-                </div>
-          </div>
-          <div class="slide">
-              <div onclick="changeRoute('14')"  class="song">
-                  <a onclick="changeRoute('14')"><img src="../Images//14.jpg" alt="Ylli" class="img"/></a>
-                  <h4>Yll Limani</h4>
-                  <p>ULU</p>
-                </div>
-          </div>
-          <div class="slide">
-              <div onclick="changeRoute('15')"  class="song">
-                  <a onclick="changeRoute('15')"><img src="../Images//15.jpg" alt="Elvana" class="img" /></a>
-                  <h4>Dhurata Dora x Elvana Gjata</h4>
-                  <p>Luj</p>
-                </div>
-          </div>
         </div>
     </div>
     </div>
@@ -287,7 +104,7 @@
       function changeRoute(value)
       {
         element = document.createElement('a');
-        element.href = '/Music2/Music2.html';
+        element.href = '/Melody-puzzle/Music2/Music2.php';
         document.body.appendChild(element);
         localStorage.setItem('music-key',value);
         element.click();
