@@ -19,7 +19,7 @@
         <br>Tell us about your <br>concern.
     </h1>
     <p class="right-side-paragraph">Let's create something better together.</p>
-    <p class="right-side-paragraph">melodypuzzle@outlook.com</p>
+    <p class="right-side-paragraph" style="margin-top:34px;">melodypuzzle@outlook.com</p>
     </div>
     <div class="left-side">
         <h3 class="left-side-text">Send us a message!</h3>
@@ -51,6 +51,7 @@
   include_once '../Contact Us/process_contact.php';
  ?>
     </main>
+    <br>
     <footer>
         <?php
           include('../footer/footer.php');
