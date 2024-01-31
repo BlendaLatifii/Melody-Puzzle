@@ -2,7 +2,7 @@
     <html>
     <head>
         <title>MelodyPuzzle | Play music, find songs | Online website</title>
-   <link rel="stylesheet" href="Home.css">
+   <link rel="stylesheet" href="../Home/Home.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -31,11 +31,18 @@
                         Discover, stream, and share a constantly expanding mix of music <br> from emerging and major artists around the world.
                     </p>
                     <div class="buttons">
-                        <button class="music-library"><a href="../Music/Music.php" style="color: white;">
+                        <button class="music-library" style="padding: 15px;
+    border-radius: 20px;
+    border-color: aliceblue;
+    border-style: double;
+    border-width: thin;
+    position: relative;
+    top: -250px;
+    left: 0;
+    margin: 0 auto;"><a href="../Music/Music.php" >
                             Open Music Library
                             </a>
                         </button>
-                        <button class="sign-up"><a href="../SignUp/Sign up.php">Sign Up</a></button>
                     </div>
                 </div>
                 <hr style="position: relative; top: -60px; border: none; background: linear-gradient(to right , gray , black); height: 1px;">

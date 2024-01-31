@@ -49,6 +49,13 @@ body {
         padding-top: 80px;
     }
 
+    input[type = text]{
+        padding: 0;
+    }
+
+    .issues{
+        font-size: smaller;
+    }
     .right-side-paragraph{
         font-size: 6px;
         position: absolute;

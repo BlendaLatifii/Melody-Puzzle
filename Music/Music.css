@@ -155,4 +155,4 @@
     }
     .PostSlide .innerContainer,.PostSlide .slider,.PostSlide .handles,.PostSlide .dots{direction:ltr;}
 
-    .PostSlide .innerContainer .slider .slide>div{display:block;background-size: cover!important;background-position: center center!important;min-width:100%;height:100%;border-radius:8px}
+    .PostSlide .innerContainer .slider .slide>div{background-size: cover!important;background-position: center center!important;min-width:100%;height:100%;border-radius:8px}

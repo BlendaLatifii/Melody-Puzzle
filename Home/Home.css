@@ -16,20 +16,6 @@
     top: 60px;
 }
 
-
-
-.sign-up {
-    padding: 15px;
-    border-radius: 20px;
-    border-color: aliceblue;
-    border-style: double;
-    border-width: thin;
-    position: relative;
-    top: -250px; 
-    left: 0; 
-    width: 80%; 
-    margin: 0 auto; 
-}
 @media screen and (max-width: 768px) {
     #artist {
         flex-wrap: wrap; 

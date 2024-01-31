@@ -48,7 +48,7 @@
   
     <div class="songs">
         <table border="1">
-            <th><h4 style="color:green;font-family: cursive; text-align: center;font-size:24px;padding: 0px;">Noizy's Songs</h4></th>
+            <th><h4 style="color:green;font-family: cursive; text-align: center;font-size:24px;padding: 0px;">Capital's Songs</h4></th>
         </table>
            <ul class="songs">
             <li>

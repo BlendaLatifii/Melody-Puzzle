@@ -37,7 +37,7 @@
             <input type="text" name="subject" style="padding: 10px 0; width: 100%; border: none; border-bottom: 1px solid gray; outline: none; border-radius: 5px;">
             <label for="Subject">Subject</label>
             <br>
-            <p style="font-size: x-large;font-family: system-ui;font-weight: 700;letter-spacing: -1px;color: darkred;">Tell us more about your concern.</p>
+            <p class="issues" style="font-size: x-large;font-family: system-ui;font-weight: 700;letter-spacing: -1px;color: darkred;">Tell us more about your concern.</p>
             <br>
             <input type="text" name="message" style="padding: 10px 0; width: 100%; border: none; border-bottom: 1px solid gray; outline: none; border-radius: 5px;">
             <label for="message">Message</label>

@@ -56,7 +56,7 @@
        <ul class="songs">
         <li>
         <div class="all-li">
-            <div class="song-photo"><img src="../Images/ilegal.jpeg" style="width: 60px; height: 36px;"></div>
+            <div class="song-photo"><img src="../Images/ilegal.jpg" style="width: 60px; height: 36px;"></div>
             <span class="name-of-song">Ilegal</span>
             -Rina
         </div>
@@ -64,7 +64,7 @@
         </li>
         <li>
             <div class="all-li">
-                <div class="song-photo"><img src="../Images/qiakt.jpg" style="width: 60px; height: 36px;"></div>
+                <div class="song-photo"><img src="../Images/qikat.jpg" style="width: 60px; height: 36px;"></div>
                 <span class="name-of-song">Qikat</span>
                 -Rina ft Adelina Ismaili
             </div>

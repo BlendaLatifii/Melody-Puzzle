@@ -19,7 +19,7 @@
         ?>
          <div class="header">
             <div style="display: flex; justify-content: flex-start;padding-right: 5px;">
-               <a href="../Home/index.php" ><img src="../Images/logoo.png" alt="logo" style="width: 35px;"></a>
+               <a href="../Home/index.php" ><img src="../Images/logoo.png" alt="logo" style="width: 35px; height:auto;box-shadow: rgba(0, 0, 0, 0.24) 9px 7px 10px;border-radius:10px"></a>
            <h1 class="logo">MelodyPuzzle</h1>
             </div>
             <nav>
