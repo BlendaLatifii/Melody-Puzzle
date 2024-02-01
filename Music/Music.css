@@ -129,7 +129,7 @@
     .PostSlide .innerContainer .handles{display:flex;justify-content:space-between;position:relative;top:-165px;width:103%;cursor:pointer;margin-right:-20px;margin-left:-20px;z-index:4;-webkit-tap-highlight-color:transparent;}
     .PostSlide .dots{display:flex;align-items:center;justify-content:center;gap:10px;position:relative;}
     .PostSlide .dots span{border-radius:10px;background:#CBCBCB;width:6px;height:6px;display:inline-block;cursor:pointer;}
-    .PostSlide .slider *{user-drag:none;-webkit-user-drag:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
+    .PostSlide .slider *{-webkit-user-drag:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
     .PostSlide .handles > span{transition:opacity 0.3s;}
     .PostSlide .handles .prev{opacity:0;}
     .PostSlide .handles .next{opacity:1;}
@@ -155,4 +155,4 @@
     }
     .PostSlide .innerContainer,.PostSlide .slider,.PostSlide .handles,.PostSlide .dots{direction:ltr;}
 
-    .PostSlide .innerContainer .slider .slide>div{background-size: cover!important;background-position: center center!important;min-width:100%;height:100%;border-radius:8px}
+    .PostSlide .innerContainer .slider .slide>div{background-size: cover!important;background-position: center center!important;min-width:20%;height:100%;border-radius:8px;}

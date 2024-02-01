@@ -17,10 +17,7 @@ $user  = $userRepository->getUserById($userId);
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 50;
             height: 100vh;
             background: url(../Images/bg.jpg);
            background-size: cover;
@@ -70,7 +67,8 @@ $user  = $userRepository->getUserById($userId);
     ?>
     </header>
     <br>
-    <main>
+    <main style="display:flex;justify-content: center;
+            align-items: center;">
     <form action="" method="post">
     <h3 style="color: #3498db;
             margin-bottom: 10px;">Edit User</h3>

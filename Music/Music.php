@@ -18,7 +18,8 @@
         $repo = new SongsRepository();
         $songs = $repo->getAllSongs();
         ?>
-    </header>    
+    </header> 
+    <main>   
     <div class="search-bar">
       <h1>Looking for something specific?</h1>
       <button id="a" >
@@ -29,6 +30,8 @@
         </div>
       </button>
     </div>
+    
+
     <h1 id="releases" >On top this week</h1>
       <div class="PostSlide">
       
@@ -89,12 +92,11 @@
     </div>
     </div>
 
-    <div style="display: flex;align-items: center;justify-content: center;">
+    <div style="display:flex;align-items: center;justify-content: center;">
         <button class="see-all-button" onclick="seeAll()">See All</button>
       </div>
-    
-    <br>
-    <footer>
+            </main>
+      <footer>
         <?php
           include('../footer/footer.php');
         ?>
@@ -111,6 +113,7 @@
 
       function seeAll()
       {
+
         let carosel = document.getElementsByClassName("PostSlide")[0];
         let list = document.getElementsByClassName("latest")[0];
         let seeAllButton = document.getElementsByClassName("see-all-button")[0];
