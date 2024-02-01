@@ -24,43 +24,6 @@
 .img{
     font-family: math;
 }
-
-.round-img{
-    position: relative;
-    width: 250px; 
-    height: 230px;
-    border-radius: 50%;
-   
-    background-position: center;
-    border: 3px solid #666;
-    background-size: cover;
-}
-
-@media screen and(max-width:150%){
-    #round-img:first-child{
-    height: 262px!important;
-    margin: 0 0 0 -131px;
-    top: 10px!important;
-    width: 262px!important;
-    }
-
-    .round-img:nth-child(2){
-        width: 87px;
-        height: 87px;
-        top: 8.025405137689816px;
-        left: 796.3849882723465px;
-        position: absolute;
-    }
-}
-
-#artist :first-child{
-    height: 280px;
-    left: 525px;
-    top: 8px;
-    width: 21%;
-    position: absolute;
-}
-
 .main-text{
     padding-left: 80px;
 }
