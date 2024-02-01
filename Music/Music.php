@@ -29,7 +29,6 @@
         </div>
       </button>
     </div>
-
     <h1 id="releases" >On top this week</h1>
       <div class="PostSlide">
       

@@ -54,6 +54,12 @@
     width: 80vw;
 
 }
+
+.Artists{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 #releases{
     margin-left: 5%;
 }
@@ -92,12 +98,6 @@
     padding:7px ;
 }
 
-.Artists{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
 .slide .song{
     width: 20%;
     height: 30%;
@@ -134,7 +134,7 @@
     .PostSlide .handles .prev{opacity:0;}
     .PostSlide .handles .next{opacity:1;}
     .PostSlide .handles *{user-select:none;}
-    .PostSlide .innerContainer .slider .slide{display:flex!important;flex-direction:row;justify-content:space-between;}
+    .PostSlide .innerContainer .slider .slide{display:flex!important;justify-content:space-between;}
     @media (min-width: 1280px){
         .PostSlide .innerContainer .slider{width:1200px!important;margin:auto;}
     }

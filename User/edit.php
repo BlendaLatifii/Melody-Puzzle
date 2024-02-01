@@ -7,17 +7,12 @@ $user  = $userRepository->getUserById($userId);
 
 
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
 <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,6 +22,9 @@ $user  = $userRepository->getUserById($userId);
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background: url(../Images/bg.jpg);
+           background-size: cover;
+           background-position: center;
         }
 
         .container {
@@ -64,6 +62,15 @@ $user  = $userRepository->getUserById($userId);
         
       
     </style>
+</head>
+<body>
+    <header>
+     <?php
+    include("../header/header.php");
+    ?>
+    </header>
+    <br>
+    <main>
     <form action="" method="post">
     <h3 style="color: #3498db;
             margin-bottom: 10px;">Edit User</h3>
@@ -82,6 +89,7 @@ $user  = $userRepository->getUserById($userId);
 
         <input type="submit" name="editBtn" value="save"> <br> <br>
     </form>
+    </main>
 </body>
 </html>
 

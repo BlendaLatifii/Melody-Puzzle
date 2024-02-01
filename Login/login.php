@@ -42,7 +42,7 @@
 <body>
   <div class="container">
   <form  method="post" >
-    <div style="display: flex; justify-content: center; margin-top: 5px;">
+    <div style="display: flex; justify-content: center;">
       <a href="../Home/index.php" ><img src="../Images/logoo.png" alt="logo"></a>
   </div>
     <div>
