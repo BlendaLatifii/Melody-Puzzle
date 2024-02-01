@@ -45,59 +45,6 @@
                         </button>
                     </div>
                 </div>
-                <hr style="position: relative; top: -60px; border: none; background: linear-gradient(to right , gray , black); height: 1px;">
-                <div class="artists-container">
-                    <p style="display: flex;
-                       justify-content: center;
-                        font-family: math;
-                        font-size: 25px;">
-                            <b>
-                            Hear artists on trend for free in the MelodyPuzzle community.
-                            </b>
-                        </p>
-                    <div id="artist">
-                    <div id="ylli" class="round-img artist-link" data-val="Yll Limani***" style="background-image: url(../Images/yllLimani.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Dhurata Dora***" style="background-image: url(../Images/DhurataDora.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Noizy***" style="background-image: url(../Images/Noizy.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Stresi***" style="background-image: url(../Images/Stresi.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Rina Balaj***" style="background-image: url(../Images/RinaBalaj.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Melinda Ademi***" style="background-image: url(../Images/melindaAdemi.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Muma***" style="background-image: url(../Images/muma.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Ledri Vula***" style="background-image: url(../Images/ledriVula.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Butrint Imeri***" style="background-image: url(../Images/butrintImeri.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Mozzik***" style="background-image: url(../Images/mozzik.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="BM***" style="background-image: url(../Images/bm.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Capital T***" style="background-image: url(../Images/capitalT.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Elvana Gjata***" style="background-image: url(../Images/elvanaGjata.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Finem***" style="background-image: url(../Images/finem.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Luiz Ejlli***" style="background-image: url(../Images/luizEjlli.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Lyrical Son***" style="background-image: url(../Images/lyricalSon.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Marin***" style="background-image: url(../Images/marin.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="MC Kresha***" style="background-image: url(../Images/mcKresha.jpeg);">
-                    </div>
-                    <div class="round-img artist-link" data-val="Stealth***" style="background-image: url(../Images/stealth.jpeg);">
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <br>
 </main>
         <footer>
           <?php
