@@ -15,21 +15,17 @@ $song  = $songRepository->getSongById($songId);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit Song</title>
 </head>
 <body>
 <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
             background: url(../Images/bg.jpg);
             background-size: cover;
             background-position: center;
             margin: 0;
             padding: 0;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
         }
 
@@ -69,6 +65,16 @@ $song  = $songRepository->getSongById($songId);
       
     </style>
 
+    <header>
+     <?php
+    include("../header/header.php");
+    ?>
+    </header>
+    <br>
+    <br>
+    <main style=" display: flex;justify-content: center;
+            align-items: center;flex-direction: column;">
+
 <form action="" method="post" enctype="multipart/form-data" >
     <label for="title">Title:</label>
     <input type="text" id="title" name="title"  value="<?=$song['title']?>" required>
@@ -92,6 +98,7 @@ $song  = $songRepository->getSongById($songId);
 
     <input name="Edit"   type="submit" value="Edit">
 </form>
+    </main>
 </body>
 
 <?php

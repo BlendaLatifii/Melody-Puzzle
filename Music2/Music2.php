@@ -10,8 +10,10 @@
 </head>
 <body>
   <header>
+    <?php
+    ?>
        <?php
-        include('../header/header.php');
+        include("../header/header.php");
         include('../Music/songsRepository.php');
         $id = intval($_GET['id']);
         $repo = new SongsRepository();
@@ -77,16 +79,6 @@
 
 
 <script>
-//     document.addEventListener('DOMContentLoaded', function() {
-
-//     var storedItem = localStorage.getItem('music-key');
-
-    
-//     if (storedItem !== null) {
-//        document.getElementById('main-image').src = `../Images/${storedItem}.jpg`;
-//        document.getElementById('music').src = `../songs/${storedItem}.mp3`;
-//     }
-// });
   let music = document.getElementById("music");
       let playPauseBtn = document.getElementById("playPauseBtn");
       let timer = document.getElementById("timer");
