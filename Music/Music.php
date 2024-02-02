@@ -110,7 +110,7 @@ h1{
         ?>
     </header>
     <main>
-    <h1 style="display:flex;justify-content:center;">Looking for something specific?</h1>
+    <h1 style="display:flex;justify-content:center;margin-top:20px;">Looking for something specific?</h1>
        <div class="container">
         <input type="search" placeholder="Search..." list="search-suggestions" autocomplete="off">
         <button class="b">
