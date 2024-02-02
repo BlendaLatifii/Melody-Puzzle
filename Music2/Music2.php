@@ -37,7 +37,10 @@
     <audio id="music" loop>
         <source src="<?php echo '../songs/'.$song['Music']?>" id="music" type="audio/mp3" />
       </audio>
-        <img id="main-image" src="<?php echo '../Images/'.$song['Photo']?>"/>
+        <img id="main-image" style="max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 20px;" src="<?php echo '../Images/'.$song['Photo']?>"/>
         <span id="timer">0:00</span>
       
         <div class="playlist-container">
