@@ -61,7 +61,6 @@
 
             ?>
   <button class="playlist-button"  onclick="nextSong(<?php echo $nextSongId ?>)"id="nextBtn" style="color:green;margin-left:40px;"><i class="fa fa-forward" aria-hidden="true"></i></button>
-
             <?php
           }
           ?>
