@@ -14,7 +14,7 @@
         <main>
             <h1 style="display: flex; position:relative; left:450px">WE CONTAIN THESE ARTISTS</h1>
             <br>
-            <div class="container">
+            <div class="container" style="padding-left:70px;">
                 <div class="first">
                     <img src="../Images/YlliLimani.jpg" alt="Yll Limani" class="photos" style="width: 270px;
     height: 270px;

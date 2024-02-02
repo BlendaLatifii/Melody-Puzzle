@@ -31,7 +31,7 @@ main {
 
 #background-image {
     position: relative;
-    left: 20%;
+    left: 10%;
     float: right;
     margin: 0 auto;
     width: 70%;
@@ -41,7 +41,7 @@ main {
 .main-text {
     text-align: left;
     color: aliceblue;
-    padding: 0 20px;
+    padding: 0 80px;
     position: relative;
     top: 30vh;
 }
