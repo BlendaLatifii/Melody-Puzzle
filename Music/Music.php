@@ -8,6 +8,97 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="Music.css" />
 </head>
+<style>
+ .container{
+    background: #ada7a7;
+    padding: 10px;
+    border-radius: 50px;
+    width: 33%;
+    display: flex;
+    justify-content: right;
+    margin-left: 33%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+ }
+
+ input{
+    background: none;
+    color: white;
+    width: 50%;
+    min-width: 381px;
+    padding: 50px -3px;
+    border-radius: 24px;
+    font-size: 16px;
+    border: 0px;
+    outline: none;
+ }
+
+ .search-bar [list]::-webkit-list-button,
+.search-bar [list]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+ .b{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    background: #2f3640;
+    color: white;
+ }
+
+ .container:hover .b{
+    background: black;
+ }
+
+
+ @media only screen and (max-width: 908px){
+input {
+    min-width: 100px;
+}
+ }
+
+ @media only screen and (max-width: 1250px){
+input {
+    min-width: 330px;
+}
+ }
+
+ @media only screen and (max-width: 1200px){
+input {
+    min-width: 300px;
+    font-size: 12px;
+}
+ }
+
+ @media only screen and (max-width: 1000px){
+input {
+    min-width: 220px;
+}
+h1{
+    font-size: 20px;
+}
+.container{
+    background: #ada7a7;
+    padding: 5px;
+    border-radius: 50px;
+    width: 30%;
+    display: flex;
+    justify-content: right;
+    margin-left: 33%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+ }
+ .b{
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    background: #2f3640;
+    color: white;
+ }
+
+ }
+
+</style>
 
 <body>
     <header>
@@ -19,17 +110,18 @@
         ?>
     </header>
     <main>
-        <div class="search-bar">
-            <h1>Looking for something specific?</h1>
-            <button id="a">
-                <div style="display: flex; justify-content: start; flex: 0.5">
-                    <span id="span-style">Search for Artists,Song...</span>
-                </div>
-                <div id="search"> <i style="font-size: 24px; color: lightseagreen; margin-right: 5px;" class="fa fa-search"></i>
-                </div>
-            </button>
-        </div>
-
+    <h1 style="display:flex;justify-content:center;">Looking for something specific?</h1>
+       <div class="container">
+        <input type="search" placeholder="Search..." list="search-suggestions" autocomplete="off">
+        <button class="b">
+            <i class="material-icons">search</i>
+        </button>
+        <datalist id="search-suggestions">
+        <option value="Tayna">
+        <option value="Capital T">
+        <option value="Vinz">
+      </datalist>
+       </div>
 
         <h1 id="releases">On top this week</h1>
         <div class="PostSlide">
@@ -359,6 +451,8 @@
             var container = document.querySelector('.PostSlide .innerContainer');
             new PostSlider(container, 3);
         })
+
+        
     </script>
 </body>
 

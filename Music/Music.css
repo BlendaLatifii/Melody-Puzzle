@@ -21,28 +21,7 @@
 .flex{
     display: flex;
 }
-#span-style{
-    margin-left: 5px;
-    font-size: 16px; 
-    font-family: Arial, Helvetica, sans-serif;
-}
-#search{
-    flex: 1.5;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
 
-.search-bar{
-    height:40vh;
-    background: linear-gradient(rgb(16, 187, 173), 0.829);
-    background-position: 50% 100%;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 #a{ 
     display: flex;
     align-items: center;

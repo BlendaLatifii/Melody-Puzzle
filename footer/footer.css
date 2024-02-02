@@ -4,13 +4,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    
 }
 
 .right-side-footer {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start; 
     text-indent: 0;
     padding-left: 0;
     width: 100%;
@@ -24,10 +23,10 @@
 }
 
 .right-side-footer a:hover {
-    color: burlywood;
+    color:black;
 }
 
-@media only screen and (min-width: 200px) {
+@media only screen and (min-width: 600px) {
     .footer {
         flex-direction: row;
     }
@@ -41,5 +40,28 @@
 
     .right-side-footer a {
         margin-right: 20px; 
+        margin-bottom: 0; 
     }
+    
+    .right-side-footer a {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 200px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .right-side-footer {
+        align-items: center; 
+        margin-top: 0;
+    }
+
+    .right-side-footer a {
+        margin-bottom: 0; 
+    }
+}
+
+.right-side-footer a {
+    padding: 8px;
 }
