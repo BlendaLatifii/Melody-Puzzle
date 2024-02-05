@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="login.css">
     <?php
     include('../User/UserRepository.php');
+    function username_verify($inputUsername, $storedUsername) {
+      return $inputUsername === $storedUsername;
+  }
+
     if(isset($_POST['login'])){
       if(empty($_POST['username']) || empty($_POST['password'])){
         echo "Please fill the required fields!";
@@ -15,7 +19,9 @@
         $userData = $repository->getUser($_POST['username']);
         $pass = $_POST['password'];
         $uss = $userData['password'];
+        $username=$_POST['username'];
       if($userData){
+        if(username_verify($username,$userData['username'])){
         if(password_verify($pass,$uss)){
         session_start();
         $_SESSION['id'] = $userData['id'];
@@ -25,13 +31,13 @@
         $_SESSION['role'] = $userData['role'];
         header('Location:../Home/index.php');
         exit();
-        }
-        else{
+        }else{
           echo  "<script>alert('Password is wrong!')</script>";
         }
-      }else{
-      echo  "<script>alert('Incorrect Username or Password!')</script>";
-        exit();
+        }
+        else{
+          echo  "<script>alert('Username is wrong!')</script>";
+        }
       }
     }
   }
@@ -41,7 +47,7 @@
 </head>
 <body>
   <div class="container">
-  <form  method="post" >
+  <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post" >
     <div style="display: flex; justify-content: center;">
       <a href="../Home/index.php" ><img src="../Images/logoo.png" alt="logo"></a>
   </div>
@@ -74,8 +80,6 @@
 
   </form>
 </div>
-</body>
-</html>
  <script>
      function validateForm(){
       var username=document.getElementById('username').value;

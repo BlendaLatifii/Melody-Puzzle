@@ -214,7 +214,6 @@ h1{
                 seeAllButton.textContent = "See less";
             }
         }
-
         var autoplayIntervalInSeconds = 3;
 
 
@@ -271,7 +270,6 @@ h1{
                     });
                 }
             }
-
 
             scrollToPosition(position, smooth = true) {
                 const currentPosition = this.slider.scrollLeft;
@@ -374,7 +372,6 @@ h1{
                 this.slider.addEventListener('scroll', () => {
                     const scrollLeft = this.slider.scrollLeft;
                     const currentIndex = Math.trunc((Math.abs(scrollLeft) + 2) / this.slider.clientWidth);
-
                     for (let i = 0; i < this.dots.length; i++) {
                         this.dots[i].classList.remove('active');
                     }
@@ -420,7 +417,6 @@ h1{
                 const dotCount = Math.floor(this.slider.scrollWidth / this.slider.clientWidth);
                 const dotsContainer = this.container.querySelector('.dots');
                 dotsContainer.innerHTML = '';
-
                 for (let i = 0; i < dotCount; i++) {
                     const dot = document.createElement('span');
                     dot.addEventListener('click', () => {
@@ -451,7 +447,6 @@ h1{
             var container = document.querySelector('.PostSlide .innerContainer');
             new PostSlider(container, 3);
         })
-
         
     </script>
 </body>
